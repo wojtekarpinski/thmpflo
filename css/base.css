@@ -1,0 +1,8 @@
+/**
+ * @file
+ * Generic base elements.
+ */
+
+.navbar-default .navbar-brand {
+  color: var(--color--come);
+}

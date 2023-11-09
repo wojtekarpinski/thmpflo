@@ -1,0 +1,23 @@
+name: 'ePortfolio'
+type: theme
+base theme: bootstrap
+core_version_requirement: ^9.5 || ^10
+description: 'Custom theme for ePortfolio site, based on the <em>Bootstrap</em> theme. Created by <a href="https://ckc.uw.edu.pl/">CKC UW</a>.'
+package: 'ePortfolio'
+version: '10.x-1.0'
+
+regions:
+  navigation: 'Navigation'
+  navigation_collapsible: 'Navigation (Collapsible)'
+  header: 'Top Bar'
+  highlighted: 'Highlighted'
+  help: 'Help'
+  content: 'Content'
+  sidebar_first: 'Primary'
+  sidebar_second: 'Secondary'
+  footer: 'Footer'
+  page_top: 'Page top'
+  page_bottom: 'Page bottom'
+
+libraries:
+  - 'thmpflo/global-styling'
