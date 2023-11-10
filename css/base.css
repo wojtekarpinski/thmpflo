@@ -21,5 +21,10 @@
 }
 
 .btn-salmon {
+  color:white;
   background-color: var(--color--salmon);
+}
+
+.blurb {
+  background-image: url(themes/contrib/thmpflo/files/plama.svg);
 }
