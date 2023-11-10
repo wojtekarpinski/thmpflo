@@ -27,4 +27,6 @@
 
 .blurb {
   background-image: url(../files/plama.svg);
+  background-position: right;
+  background-repeat: no-repeat;
 }
