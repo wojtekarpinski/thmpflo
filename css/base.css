@@ -13,5 +13,13 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  padding-bottom: 5px;
 }
 
+.light-gray-bg {
+  background-color: (--color--lightgray);
+}
+
+.btn-salmon {
+  background-color: (--color--salmon);
+}
