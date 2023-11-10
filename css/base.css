@@ -17,9 +17,9 @@
 }
 
 .light-gray-bg {
-  background-color: (--color--lightgray);
+  background-color: var(--color--lightgray);
 }
 
 .btn-salmon {
-  background-color: (--color--salmon);
+  background-color: var(--color--salmon);
 }
