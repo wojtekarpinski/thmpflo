@@ -60,13 +60,14 @@ button.sidebar:focus{
 }
 
 button.btn-salmon{
-    margin: 2px;
-    padding: 0.5rem;
-    border-radius: 5px 5px 5px 5px;
-    border-style: solid; 
-    border-width: 1px;
-    border-color: lightgray;
-    background-color: var(--color--lightgray);
+  margin: 2px;
+  padding: 0.5rem;
+  border-radius: 5px 5px 5px 5px;
+  border-style: solid; 
+  border-width: 1px;
+  border-color: lightgray;
+  background-color: var(--color--salmon);
+  color:white;
 }
 
 button.btn-uw{
