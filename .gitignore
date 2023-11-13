@@ -1,2 +1,4 @@
 # Ignoring files/ directory
 files/
+# html page for testing locally
+test.html
