@@ -90,3 +90,49 @@ button.btn-uw:hover{
     border-color: var(--color--salmon);
     filter:brightness(1);
 }
+
+#search {
+  display: flex;
+  flex-direction: column;
+}
+
+#advanced-search {
+  display: flex;
+  flex-direction: column;
+}
+
+input[type="search"] {
+  padding: 1rem;
+  border-radius: 5px;
+  border: solid 1px var(--color--bordergray);
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+input:focus {
+  outline:none;
+  border-color: var(--color--salmon);
+}
+
+button[type="submit"] {
+  width: 25%;
+}
+
+.btn-advanced-search {
+  width: 100%;
+  text-align: right;
+  border: none 1px;
+  border-top-style: solid;
+  border-color: var(--color--bordergray);
+  background: none;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.btn-advanced-search:focus{
+  color:red;
+}
+
+#advanced-search {
+  display: none;
+}
