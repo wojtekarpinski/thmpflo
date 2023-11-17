@@ -91,6 +91,9 @@ button.btn-uw:hover{
     filter:brightness(1);
 }
 
+
+/* Search forms */
+
 #search {
   display: flex;
   flex-direction: column;
@@ -135,4 +138,30 @@ button[type="submit"] {
 
 #advanced-search {
   display: none;
+}
+
+
+/* Search results */
+
+#search-results {
+  width: 100%;
+}
+
+#search-results td, #search-results th {
+  padding: 1rem;
+}
+
+#search-results tr:nth-child(even) {
+  background-color: var(--color--lightgray);
+}
+
+#search-results tr:hover {
+  background-color: var(--color--salmon);
+  color: white;
+}
+
+#search-results th {
+  color: var(--color--thgray);
+  font-weight: 400;
+  background-color: white;
 }

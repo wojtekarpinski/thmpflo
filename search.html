@@ -1,0 +1,87 @@
+<!doctype HTML>
+<html>
+    <head>
+        <link rel="stylesheet" href="css/variables.css"/>
+        <link rel="stylesheet" href="css/base.css"/>
+        <link rel="stylesheet" href="css/test.css"/>
+        <link rel="stylesheet" href="https://cdn.usebootstrap.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+        <script type="text/javascript" src="scripts/searchSelect.js"></script>
+
+    </head>
+    <body>
+        <div id="szukaj">
+            <h3>Szukaj pracownika</h3>
+            <form id="search" action="/php/basicSearch.php">
+                <input type="search" id="basic-search"/>
+                <div id="advanced-search">
+                    <input type="search" id="search-name" placeholder="Imię"/>
+                    <input type="search" id="search-surname" placeholder="Nazwisko"/>
+                    <input type="search" id="search-academic-title" placeholder="Tytuł naukowy"/>
+                    <input type="search" id="search-position" placeholder="Stanowisko"/>
+                    <input type="search" id="search-research-field" placeholder="Dziedzina naukowa"/>
+                    <input type="search" id="search-unit" placeholder="Jednostka"/>
+                </div>
+                <div id="submit-search">
+                    <button class="btn-salmon pull-right" type="submit">Szukaj</button>
+                </div>
+                <button onmousedown="searchSelect()" id="search-selector"class="btn-advanced-search pull-right">Wysukiwanie zaawansowane 🔽</button>
+            </form>
+
+        </div>
+        <div id="poka">
+            <h3> Wyniki wyszukiwania</h3>
+            <table id="search-results">
+                <tr>
+                    <th>Imię Nazwisko</th>
+                    <th>Tytuł Naukowy</th>
+                    <th>Wydział / Jednostka</th>
+                </tr>
+                <tr>
+                    <td>Ragnar Dúfusson</td>
+                    <td>dr hab.</td>
+                    <td>Centrum Kompetencji Cyfrowych</td>
+                </tr>
+                <tr>
+                    <td>Edd Cetera</td>
+                    <td>dr </td>
+                    <td>Wydział Filozofii</td>
+                </tr>
+                <tr>
+                    <td>Michaela Quinnn</td>
+                    <td>dr n. med</td>
+                    <td>Wydział Medyczny</td>
+                </tr>
+                <tr>
+                    <td>Zygmunt Wiosło</td>
+                    <td>mgr</td>
+                    <td>Wydział Geografii i Studiów Regionalnych</td>
+                </tr>
+                <tr>
+                    <td>Wiesław Dziąsło</td>
+                    <td></td>
+                    <td>Wydział Polonistyki</td>
+                </tr>
+                <tr>
+                    <td>Bożydar Nowisoda</td>
+                    <td>mgr</td>
+                    <td>Wydział Orientalistyczny</td>
+                </tr>
+                <tr>
+                    <td>Dobromir Golibroda</td>
+                    <td></td>
+                    <td>Wydział Historii</td>
+                </tr>
+                <tr>
+                    <td>Krzesimir Waligóra</td>
+                    <td></td>
+                    <td>Wydział Pedagogiczny</td>
+                </tr>
+                <tr>
+                    <td>Jaromir Łasikota</td>
+                    <td></td>
+                    <td>Wydział Patologiczny</td>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>
