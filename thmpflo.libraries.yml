@@ -5,5 +5,5 @@ global-styling:
       css/variables.css: {}
       css/base.css: {}
   js:
-      js/searchSelect.js: {}
+      scripts/searchSelect.js: {}
 
