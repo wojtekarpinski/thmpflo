@@ -104,6 +104,12 @@ button.btn-uw:hover{
   flex-direction: column;
 }
 
+#submit-search {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
 input[type="search"] {
   padding: 1rem;
   border-radius: 5px;
