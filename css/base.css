@@ -2,33 +2,33 @@
  * @file
  * Generic base elements.
  */
- 
- /* Flex utilities */
- 
 
- .flex-row-space-between {
-   display: flex;
-   flex-direction: row;
-   justify-content: space-between;
-   align-items: center;
- }
- 
- .flex-column {
-   display:flex;
-   flex-direction: column;
- }
 
- .flex-row-flex-end {
+/* Flex utilities */
+ 
+.flex-row-space-between {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+ 
+.flex-column {
+  display:flex;
+  flex-direction: column;
+}
+
+.flex-row-flex-end {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-
- }
+}
 
 .flex-center {
   display: flex;
   justify-content: center;
 }
+
 
 /* Padding utilities */
 
@@ -40,11 +40,11 @@
   padding-bottom: 15px
 }
 
+
 /* Homepage, navbar and footer branding and looks */
 
-
 .navbar-default .navbar-brand {
-  color: var(--color--salmon);
+  color: var(--color--come);
 }
 
 
@@ -66,7 +66,6 @@ footer.container-fluid {
 
 /* Buttons */
 
-
 .btn-salmon {
   color:white;
   background-color: var(--color--salmon);
@@ -83,10 +82,9 @@ button.sidebar {
   border-width: 1px;
   border-color: lightgray;
   background-color: var(--color--lightgray);
-
 }
 
-button.sidebar:focus{
+button.sidebar:focus {
   width: 100%;
   border-radius: 5px 0px 0px 5px;
   border-color: var(--color--salmon);
@@ -94,7 +92,7 @@ button.sidebar:focus{
   background-color: var(--color--salmon);
 }
 
-button.btn-salmon{
+button.btn-salmon {
   margin: 2px;
   padding: 1rem 2rem 1rem 2rem;
   border-radius: 5px 5px 5px 5px;
@@ -105,31 +103,28 @@ button.btn-salmon{
   color:white;
 }
 
-button.btn-uw{
-    margin: 2px;
-    padding: 1rem 2rem 1rem 2rem;
-    border-radius: 0;
-    border-style: solid; 
-    border-width: 2px;
-    border-color: var(--color--uwblue);
-    background:none;
+button.btn-uw {
+  margin: 2px;
+  padding: 1rem 2rem 1rem 2rem;
+  border-radius: 0;
+  border-style: solid; 
+  border-width: 2px;
+  border-color: var(--color--uwblue);
+  background:none;
 }
 
-
-button:hover{
-    filter:brightness(0.98);
+button:hover {
+  filter:brightness(0.98);
 }
 
-
-button.btn-uw:hover{
-    color: var(--color--salmon);
-    border-color: var(--color--salmon);
-    filter:brightness(1);
+button.btn-uw:hover {
+  color: var(--color--salmon);
+  border-color: var(--color--salmon);
+  filter:brightness(1);
 }
 
 
 /* Search forms */
-
 
 input[type="search"] {
   padding: 1rem;
@@ -166,7 +161,6 @@ button[type="submit"] {
 
 /* Search results */
 
-
 #search-results {
   width: 100%;
 }
@@ -188,4 +182,11 @@ button[type="submit"] {
   color: var(--color--thgray);
   font-weight: 400;
   background-color: white;
+}
+
+/* Content Containers Indexator */
+
+.pudlo:not(.cci-expanded), 
+.paka:not(.cci-expanded) {
+  display: none; 
 }
