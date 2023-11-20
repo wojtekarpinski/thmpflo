@@ -194,3 +194,10 @@ button[type="submit"] {
   font-weight: 400;
   background-color: white;
 }
+
+/* Content Containers Indexator */
+
+.pudlo:not(.cci-expanded),
+.paka:not(.cci-expanded) {
+  display: none;
+}
