@@ -3,31 +3,36 @@
  * Generic base elements.
  */
  
- /* Flex utilities */
+ 
+/* Flex utilities */
  
 
- .flex-row-space-between {
-   display: flex;
-   flex-direction: row;
-   justify-content: space-between;
-   align-items: center;
- }
  
- .flex-column {
-   display:flex;
-   flex-direction: column;
- }
-
- .flex-row-flex-end {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-
- }
+.flex-align-items-center {
+  align-items: center;
+}
 
 .flex-center {
   display: flex;
   justify-content: center;
+}
+.flex-column {
+  display:flex;
+  flex-direction: column;
+}
+
+.flex-row-flex-end {
+display: flex;
+flex-direction: row;
+justify-content: flex-end;
+
+}
+
+.flex-row-space-between {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
 /* Padding utilities */
