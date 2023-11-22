@@ -82,7 +82,6 @@ justify-content: flex-end;
 }
 
 footer { /* Stick footer to bottom of the page */
-  position:absolute;
   bottom:0px;
 }
 
