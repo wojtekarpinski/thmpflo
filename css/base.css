@@ -67,14 +67,8 @@ justify-content: flex-end;
 /* Homepage, navbar and footer branding and looks */
 
 body {
-  min-height: 100vh;
-  margin:0;
-  display:flex;
-  flex-direction: column;
-}
-
-div[role="main"] {
-  flex:1;
+  display:grid;
+  grid-template-rows: 1fr auto auto;
 }
 
 .navbar-default .navbar-brand {
