@@ -2,8 +2,8 @@
  * @file
  * Generic base elements.
  */
- 
- 
+
+
 /* Flex utilities */
  
 
@@ -38,18 +38,36 @@ justify-content: flex-end;
 /* Padding utilities */
 
 .padding-bottom-5 {
-  padding-bottom: 5px
+  padding-bottom: 5px;
 }
 
 .padding-bottom-15 {
-  padding-bottom: 15px
+  padding-bottom: 15px;
 }
+
+.padding-top-5 {
+  padding-top: 5px;
+}
+
+.padding-top-15 {
+  padding-top: 15px;
+}
+
+.padding-topbottom-5 {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.padding-topbottom-15 {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
 
 /* Homepage, navbar and footer branding and looks */
 
-
 .navbar-default .navbar-brand {
-  color: var(--color--salmon);
+  color: var(--color--come);
 }
 
 
@@ -71,7 +89,6 @@ footer.container-fluid {
 
 /* Buttons */
 
-
 .btn-salmon {
   color:white;
   background-color: var(--color--salmon);
@@ -88,10 +105,9 @@ button.sidebar {
   border-width: 1px;
   border-color: lightgray;
   background-color: var(--color--lightgray);
-
 }
 
-button.sidebar:focus{
+button.sidebar:focus {
   width: 100%;
   border-radius: 5px 0px 0px 5px;
   border-color: var(--color--salmon);
@@ -99,7 +115,7 @@ button.sidebar:focus{
   background-color: var(--color--salmon);
 }
 
-button.btn-salmon{
+button.btn-salmon {
   margin: 2px;
   padding: 1rem 2rem 1rem 2rem;
   border-radius: 5px 5px 5px 5px;
@@ -110,31 +126,28 @@ button.btn-salmon{
   color:white;
 }
 
-button.btn-uw{
-    margin: 2px;
-    padding: 1rem 2rem 1rem 2rem;
-    border-radius: 0;
-    border-style: solid; 
-    border-width: 2px;
-    border-color: var(--color--uwblue);
-    background:none;
+button.btn-uw {
+  margin: 2px;
+  padding: 1rem 2rem 1rem 2rem;
+  border-radius: 0;
+  border-style: solid; 
+  border-width: 2px;
+  border-color: var(--color--uwblue);
+  background:none;
 }
 
-
-button:hover{
-    filter:brightness(0.98);
+button:hover {
+  filter:brightness(0.98);
 }
 
-
-button.btn-uw:hover{
-    color: var(--color--salmon);
-    border-color: var(--color--salmon);
-    filter:brightness(1);
+button.btn-uw:hover {
+  color: var(--color--salmon);
+  border-color: var(--color--salmon);
+  filter:brightness(1);
 }
 
 
 /* Search forms */
-
 
 input[type="search"] {
   padding: 1rem;
@@ -171,7 +184,6 @@ button[type="submit"] {
 
 /* Search results */
 
-
 #search-results {
   width: 100%;
 }
@@ -195,9 +207,31 @@ button[type="submit"] {
   background-color: white;
 }
 
+
+/* ePportfolio presentation */
+
+/* TODO: Add body class ? */
+
+.ep-usr-image              { float: right; margin-left: 1.5em; margin-bottom: 1.5em; }
+.ep-usr-image img          { border-radius: 5px; }
+.ep-usr-name > h1,
+.ep-usr-name > h3          { display: inline-block; margin-top: 0; }
+.ep-usr-brief              { margin-top: 2em; margin-bottom: 2.5em; }
+.ep-sub-group > h2         { display: none; }
+.ep-usr-brief > div > div,
+.ep-sub-group > div > div  { margin-bottom: 1.2em; }
+
+
 /* Content Containers Indexator */
 
+/* ---- TESTOWE ---- */
 .pudlo:not(.cci-expanded),
-.paka:not(.cci-expanded) {
+.paka:not(.cci-expanded)
+{
+  display: none;
+}
+
+.ep-sub-group:not(.cci-expanded)
+{
   display: none;
 }
