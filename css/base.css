@@ -23,10 +23,39 @@
   flex-direction: row;
   justify-content: flex-end;
 }
+=======
+ 
+ 
+/* Flex utilities */
+ 
+
+ 
+.flex-align-items-center {
+  align-items: center;
+}
 
 .flex-center {
   display: flex;
   justify-content: center;
+}
+.flex-column {
+  display:flex;
+  flex-direction: column;
+}
+
+.flex-row-flex-end {
+display: flex;
+flex-direction: row;
+justify-content: flex-end;
+>>>>>>> 4e5de80b1d3cbefd97e2565ba79671591fb04026
+
+}
+
+.flex-row-space-between {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
 
@@ -184,9 +213,31 @@ button[type="submit"] {
   background-color: white;
 }
 
+
+/* ePportfolio presentation */
+
+/* TODO: Add body class ? */
+
+.ep-usr-image              { float: right; margin-left: 1.5em; margin-bottom: 1.5em; }
+.ep-usr-image img          { border-radius: 5px; }
+.ep-usr-name > h1,
+.ep-usr-name > h3          { display: inline-block; margin-top: 0; }
+.ep-usr-brief              { margin-top: 2em; margin-bottom: 2.5em; }
+.ep-sub-group > h2         { display: none; }
+.ep-usr-brief > div > div,
+.ep-sub-group > div > div  { margin-bottom: 1.2em; }
+
+
 /* Content Containers Indexator */
 
-.pudlo:not(.cci-expanded), 
-.paka:not(.cci-expanded) {
-  display: none; 
+/* ---- TESTOWE ---- */
+.pudlo:not(.cci-expanded),
+.paka:not(.cci-expanded)
+{
+  display: none;
+}
+
+.ep-sub-group:not(.cci-expanded)
+{
+  display: none;
 }
