@@ -81,12 +81,6 @@ justify-content: flex-end;
   background-repeat: no-repeat;
 }
 
-footer { /* Stick footer to bottom of the page */
-  position:fixed;
-  bottom:0px;
-  left:0px;
-  width:100%
-}
 
 footer.container-fluid {
   padding-left: 0;
