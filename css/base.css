@@ -66,18 +66,26 @@ justify-content: flex-end;
 
 /* Homepage, navbar and footer branding and looks */
 
-body {
+.about {
+  font-size:large;
+}
+
+/* body {
   min-height: 100vh;
   margin:0;
   display:grid;
   grid-template-rows: 1fr auto auto;
-}
+} */
 
 div[data-off-canvas-main-canvas=""] {
   min-height:100vh;
   margin:0;
   display: grid;
   grid-template-rows: auto 1fr auto;
+}
+
+footer {
+  width:100%;
 }
 
 .navbar-default .navbar-brand {
