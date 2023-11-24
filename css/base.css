@@ -230,7 +230,7 @@ button[type="submit"] {
 
 /* minor fixups */
 
-form.user-form div.js-form-wrapper:first-child {
+form.user-form div.js-form-wrapper:not(:first-child) {
   margin-top: 1em;
 }
 
