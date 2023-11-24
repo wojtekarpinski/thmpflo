@@ -228,6 +228,12 @@ button[type="submit"] {
 }
 
 
+/* minor fixups */
+
+form.user-form div.js-form-wrapper:not(:first-child) {
+  margin-top: 1em;
+}
+
 /* ePportfolio presentation */
 
 /* TODO: Add body class ? */
@@ -244,7 +250,7 @@ button[type="submit"] {
 
 /* Content Containers Indexator */
 
-/* ---- TESTOWE ---- */
+/* ---- TEST only ---- */
 .pudlo:not(.cci-expanded),
 .paka:not(.cci-expanded)
 {
