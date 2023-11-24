@@ -230,10 +230,9 @@ button[type="submit"] {
 
 /* minor fixups */
 
-form.user-form .js-form-wrapper:not(:first-child) {
+/* form.user-form .js-form-wrapper:not(:first-child) {
   margin-top: 1em;
-  background-color:red;
-}
+} */
 
 /* ePportfolio presentation */
 
