@@ -110,10 +110,11 @@ footer.container-fluid {
 
 /* ul, li */
 
-li.active.selected {
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover {
   color:white;
   background-color: var(--color--salmon);
 }
+
 
 /* Buttons */
 
@@ -194,9 +195,9 @@ input:focus {
   border-color: var(--color--salmon);
 }
 
-button[type="submit"] {
+/* button[type="submit"] {
   width: 25%;
-}
+} */
 
 #search-selector {
   width: 100%;
