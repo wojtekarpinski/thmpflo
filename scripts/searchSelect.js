@@ -7,13 +7,13 @@ function searchSelect() {
 
 
     if (basicField.style.display === "none") {
-        searchForm.action = "/php/basicSearch.php"
+        // searchForm.action = "/php/basicSearch.php"
         advancedFields.style.display = "none";
         basicField.style.display = "flex";
         searchSwitch.innerHTML = "Wysukiwanie zaawansowane 🔽";
     } else {
         basicField.style.display = "none";
-        searchForm.action ="/php/advancedSearch.php"
+        // searchForm.action ="/php/advancedSearch.php"
         advancedFields.style.display = "flex";
         searchSwitch.innerHTML = "Proste wyszukiwanie 🔼";
     }
