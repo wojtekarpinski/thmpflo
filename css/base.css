@@ -95,17 +95,13 @@ div[data-off-canvas-main-canvas=""] {
 }
 
 #mainpage-content {
+  background-image: url(../files/plama.svg);
   background-image: url("../files/ludz.svg");
   background-position: right;
   background-repeat: no-repeat;
   height: 100%;
 }
 
-.blurb {
-  background-image: url(../files/plama.svg);
-  background-position: right;
-  background-repeat: no-repeat;
-}
 
 footer.container-fluid {
   padding-left: 0;
