@@ -108,6 +108,12 @@ footer.container-fluid {
   width:100%;
 }
 
+/* ul, li */
+
+li.active.selected {
+  color:white;
+  background-color: var(--color--salmon);
+}
 
 /* Buttons */
 
