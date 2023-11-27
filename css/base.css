@@ -115,7 +115,7 @@ footer.container-fluid {
   background-color: var(--color--salmon);
 }
 
-.tabs-below > .nav-tabs .summary, .tabs-left > .nav-tabs .summary, .tabs-right > .nav-tabs .summary {
+.tabs-below > .nav-tabs li.acvive> .summary, .tabs-left > .nav-tabs li.acvive> .summary, .tabs-right > .nav-tabs li.acvive> .summary {
   color: white
 }
 
