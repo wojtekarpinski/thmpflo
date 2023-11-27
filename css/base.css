@@ -94,6 +94,13 @@ div[data-off-canvas-main-canvas=""] {
   background-color: var(--color--lightgray);
 }
 
+#mainpage-content {
+  background-image: url("../files/ludz.svg");
+  background-position: right;
+  background-repeat: no-repeat;
+  height: 100%;
+}
+
 .blurb {
   background-image: url(../files/plama.svg);
   background-position: right;
@@ -169,6 +176,10 @@ button.btn-uw:hover {
 
 /* Search forms */
 
+div #search {
+  width: 66.66%;
+}
+
 input[type="search"] {
   padding: 1rem;
   border-radius: 5px;
@@ -200,6 +211,8 @@ button[type="submit"] {
 #advanced-search {
   display: none;
 }
+
+
 
 
 /* Search results */
