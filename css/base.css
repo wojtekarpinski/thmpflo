@@ -321,7 +321,12 @@ div.cci-idx > ul {
 
 /* TODO: Add body class ? */
 
-.ep-usr-image              { float: left; margin-left: 1.5em; margin-bottom: 1.5em; }
+.ep-usr-image {
+  float: left;
+  margin-left: 1.5em;
+  margin-bottom: 1.5em;
+  padding-right: calc(33.333% - 200px);
+ }
 .ep-usr-image img          { border-radius: 5px; }
 .ep-usr-name > h1,
 .ep-usr-name > h3          { display: inline-block; margin-top: 0; }
