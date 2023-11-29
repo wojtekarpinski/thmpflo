@@ -231,7 +231,7 @@ div.cci-idx > ul {
   position:relative;
   display: block;
   padding: 10px 15px;
-  border: 1px solid var(--color--bordergray);
+  border: none;
   border-radius: 4px 0 0 4px;
 }
 
@@ -243,8 +243,7 @@ div.cci-idx > ul {
 .cci-idx a.cci-selected {
   background-color: var(--color--salmon);
   color: white;
-  width: 105%;
-  border: none;
+  border: 1px solid var(--color--bordergray);
 }
 
 .cci-expanded {
@@ -291,7 +290,7 @@ div.cci-idx > ul {
 
 /* TODO: Add body class ? */
 
-.ep-usr-image              { float: right; margin-left: 1.5em; margin-bottom: 1.5em; }
+.ep-usr-image              { float: left; margin-left: 1.5em; margin-bottom: 1.5em; }
 .ep-usr-image img          { border-radius: 5px; }
 .ep-usr-name > h1,
 .ep-usr-name > h3          { display: inline-block; margin-top: 0; }
