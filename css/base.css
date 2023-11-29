@@ -247,11 +247,42 @@ div.cci-idx > ul {
 }
 
 .cci-expanded {
+  position:relative;
   float: right;
   width: 66.6666666%;
   border: 1px solid var(--color--bordergray);
   border-radius: 0 4px 4px;
   padding: 10px 25px;
+}
+
+/* Bajery */
+
+.cci-expanded:after {
+  content: "";
+  height: 70px;
+  width: 1px;  
+  position: absolute;  
+  left: -1px;
+  top: 65%;
+  transition: top, opacity;
+  transition-duration: 600ms;
+  transition-timing-function: ease;
+  background: linear-gradient(
+    transparent,
+    var(--color--salmon),
+    transparent
+  );
+  opacity: 0;
+}
+
+.cci-expanded:after {  
+  top: 65%;
+  opacity: 0;
+}
+
+.cci-expanded:after:hover {
+  top:25%;
+  opacity: 1;
 }
 
 /* Search results */
