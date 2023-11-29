@@ -280,7 +280,7 @@ div.cci-idx > ul {
   opacity: 0;
 }
 
-.cci-expanded:after:hover {
+.cci-expanded:hover:after {
   top:25%;
   opacity: 1;
 }
