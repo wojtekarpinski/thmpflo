@@ -213,8 +213,31 @@ input:focus {
   display: none;
 }
 
+/* e-P view list styling */
+
+div.cci-idx > ul {
+  list-style:none;
+}
 
 
+.cci-idx a {
+  cursor:pointer;
+  position:relative;
+  display: block;
+  padding: 10px 15px;
+  border: 1px solid var(--color--bordergray);
+  border-radius: 4px 0 0 4px;
+}
+
+.cci-idx a:hover {
+  background-color: var(--color--lightgray);
+  text-decoration: none;
+}
+
+.cci-idx a.cci-selected {
+  background-color: var(--color--salmon);
+  color: white;
+}
 
 /* Search results */
 
