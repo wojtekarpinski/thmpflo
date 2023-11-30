@@ -329,37 +329,45 @@ div.cci-idx > ul {
 
 /* ePportfolio presentation */
 
-/* TODO: Add body class ? */
-
-.ep-usr-image {
+body.path-portfolio .ep-usr-image {
   float: left;
   margin-left: 1.5em;
   margin-bottom: 1.5em;
   padding-right: calc(33.333% - 200px);
- }
-.ep-usr-image img          { border-radius: 5px; }
-.ep-usr-name > h1,
-.ep-usr-name > h3          { display: inline-block; margin-top: 0; }
-.ep-usr-brief{
+  border-radius: 5px;
+}
+
+body.path-portfolio .ep-usr-name > h1,
+body.path-portfolio .ep-usr-name > h3 {
+  display: inline-block; 
+  margin-top: 0; 
+}
+
+body.path-portfolio .ep-usr-brief {
   margin-top: 2em;
   margin-bottom: 2.5em;
   padding-bottom: 5em;
- }
-.ep-sub-group > h2         { display: none; }
-.ep-usr-brief > div > div,
-.ep-sub-group > div > div  { margin-bottom: 1.2em; }
+}
+
+body.path-portfolio h1.page-header, 
+body.path-portfolio .ep-sub-group > h2 { 
+  display: none;
+}
+
+body.path-portfolio .ep-usr-brief > div > div,
+body.path-portfolio .ep-sub-group > div > div {
+  margin-bottom: 1.2em;
+}
 
 
 /* Content Containers Indexator */
 
 /* ---- TEST only ---- */
 .pudlo:not(.cci-expanded),
-.paka:not(.cci-expanded)
-{
+.paka:not(.cci-expanded) {
   display: none;
 }
 
-.ep-sub-group:not(.cci-expanded)
-{
+body.path-portfolio .ep-sub-group:not(.cci-expanded) {
   display: none;
 }
