@@ -334,7 +334,11 @@ body.path-portfolio .ep-usr-image {
   margin-left: 1.5em;
   margin-bottom: 1.5em;
   padding-right: calc(33.333% - 200px);
+}
+
+body.path-portfolio .ep-usr-image img {
   border-radius: 5px;
+  border: 2px solid var(--color--txtwbg);
 }
 
 body.path-portfolio .ep-usr-name > h1,
