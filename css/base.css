@@ -213,9 +213,19 @@ input:focus {
   display: none;
 }
 
+/* e-P header styling */
+
+.ep-usr-name {
+  background-color: var(--color--salmon);
+  color: var(--color--txtwbg);
+  border-radius: 5px;
+}
+
+.ep-usr-image {
+  transform: translateY(1em);
+}
+
 /* e-P view list styling */
-
-
 
 #block-cci-ep-sections {
   width: 33.333333333%;
