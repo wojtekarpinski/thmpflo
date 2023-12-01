@@ -216,8 +216,9 @@ input:focus {
 /* e-P header styling */
 
 .ep-usr-name {
-  background-color: var(--color--salmon);
+  background: url(/themes/contrib/thmpflo/files/wzorek.png) no-repeat right,var(--color--salmon);
   color: var(--color--txtwbg);
+  background-size: 318px;
   border-radius: 5px;
 }
 
