@@ -131,7 +131,7 @@ button.sidebar {
   border-radius: 5px 5px 5px 5px;
   border-style: solid; 
   border-width: 1px;
-  border-color: lightgray;
+  border-color: var(--color--bordergray);
   background-color: var(--color--lightgray);
 }
 
@@ -139,7 +139,7 @@ button.sidebar:focus {
   width: 100%;
   border-radius: 5px 0px 0px 5px;
   border-color: var(--color--salmon);
-  color: var(-color--txtwbg);
+  color: var(--color--txtwbg);
   background-color: var(--color--salmon);
 }
 
@@ -217,7 +217,7 @@ input:focus {
 
 .ep-usr-name {
   background: url(/themes/contrib/thmpflo/files/wzorek.png) no-repeat right,var(--color--salmon);
-  color: var(--color--txtwbg);
+  color: var(---color--txtwbg);
   background-size: 318px;
   border-radius: 5px;
   padding-top: 1em;
@@ -256,7 +256,7 @@ div.cci-idx > ul {
 
 .cci-idx a.cci-selected {
   background-color: var(--color--salmon);
-  color: var(-color--txtwbg);
+  color: var(--color--txtwbg);
   border: 1px solid var(--color--bordergray);
 }
 
@@ -315,13 +315,13 @@ div.cci-idx > ul {
 
 #search-results tr:hover {
   background-color: var(--color--salmon);
-  color: var(-color--txtwbg);
+  color: var(--color--txtwbg);
 }
 
 #search-results th {
   color: var(--color--thgray);
   font-weight: 400;
-  background-color: var(-color--txtwbg);
+  background-color: var(--color--txtwbg);
 }
 
 
@@ -342,7 +342,7 @@ body.path-portfolio .ep-usr-image {
 
 body.path-portfolio .ep-usr-image img {
   border-radius: 5px;
-  border: 2px solid var(--color--txtwbg);
+  border: 2px solid var(---color--txtwbg);
 }
 
 body.path-portfolio .ep-usr-name > h1,
