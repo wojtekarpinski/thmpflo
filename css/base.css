@@ -3,6 +3,375 @@
  * Generic base elements.
  */
 
+
+/* Flex utilities */
+ 
+
+ 
+.flex-align-items-center {
+  align-items: center;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+}
+.flex-column {
+  display:flex;
+  flex-direction: column;
+}
+
+.flex-row-flex-end {
+display: flex;
+flex-direction: row;
+justify-content: flex-end;
+
+}
+
+.flex-row-space-between {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Padding utilities */
+
+.padding-bottom-5 {
+  padding-bottom: 5px;
+}
+
+.padding-bottom-15 {
+  padding-bottom: 15px;
+}
+
+.padding-top-5 {
+  padding-top: 5px;
+}
+
+.padding-top-15 {
+  padding-top: 15px;
+}
+
+.padding-topbottom-5 {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.padding-topbottom-15 {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+
+/* Homepage, navbar and footer branding and looks */
+
+.about {
+  font-size:large;
+}
+
+/* body {
+  min-height: 100vh;
+  margin:0;
+  display:grid;
+  grid-template-rows: 1fr auto auto;
+} */
+
+div[data-off-canvas-main-canvas=""] {
+  min-height:100vh;
+  margin:0;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+
 .navbar-default .navbar-brand {
   color: var(--color--come);
+}
+
+
+#block-thmpflo-informacjekontaktowe {
+  background-color: var(--color--lightgray);
+}
+
+#mainpage-content {
+  background-image:url("../files/ludz.svg"), url(../files/plama.svg);
+  background-position: right;
+  background-repeat: no-repeat;
+  height: 100%;
+}
+
+
+footer.container-fluid {
+  padding-left: 0;
+  padding-right: 0;
+  width:100%;
+}
+
+/* ul, li */
+
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover {
+  color:white;
+  background-color: var(--color--salmon);
+}
+
+/* Buttons */
+
+.btn-salmon {
+  color:white;
+  background-color: var(--color--salmon);
+}
+
+button.sidebar {
+  width: 90%;
+  display: flex;
+  justify-content: flex-start;
+  margin: 2px;
+  padding: 1rem 2rem 1rem 2rem;
+  border-radius: 5px 5px 5px 5px;
+  border-style: solid; 
+  border-width: 1px;
+  border-color: lightgray;
+  background-color: var(--color--lightgray);
+}
+
+button.sidebar:focus {
+  width: 100%;
+  border-radius: 5px 0px 0px 5px;
+  border-color: var(--color--salmon);
+  color: var(--color-txtwbg);
+  background-color: var(--color--salmon);
+}
+
+button.btn-salmon {
+  margin: 2px;
+  padding: 1rem 2rem 1rem 2rem;
+  border-radius: 5px 5px 5px 5px;
+  border-style: solid; 
+  border-width: 1px;
+  border-color: lightgray;
+  background-color: var(--color--salmon);
+  color:white;
+}
+
+button.btn-uw {
+  margin: 2px;
+  padding: 1rem 2rem 1rem 2rem;
+  border-radius: 0;
+  border-style: solid; 
+  border-width: 2px;
+  border-color: var(--color--uwblue);
+  background:none;
+}
+
+button:hover {
+  filter:brightness(0.98);
+}
+
+button.btn-uw:hover {
+  color: var(--color--salmon);
+  border-color: var(--color--salmon);
+  filter:brightness(1);
+}
+
+
+/* Search forms */
+
+div #search {
+  width: 66.66%;
+}
+
+input[type="search"] {
+  padding: 1rem;
+  border-radius: 5px;
+  border: solid 1px var(--color--bordergray);
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+input:focus {
+  outline:none;
+  border-color: var(--color--salmon);
+}
+
+/* button[type="submit"] {
+  width: 25%;
+} */
+
+#search-selector {
+  width: 100%;
+  text-align: right;
+  border: none 1px;
+  border-top-style: solid;
+  border-color: var(--color--bordergray);
+  background: none;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+#advanced-search {
+  display: none;
+}
+
+/* e-P header styling */
+
+.ep-usr-name {
+  background-color: var(--color--salmon);
+  color: var(--color--txtwbg);
+  border-radius: 5px;
+}
+
+.ep-usr-image {
+  transform: translateY(1em);
+}
+
+/* e-P view list styling */
+
+#block-cci-ep-sections {
+  width: 33.333333333%;
+}
+
+div.cci-idx > ul {
+  list-style:none;
+  padding-left: 0;
+}
+
+.cci-idx a {
+  cursor:pointer;
+  position:relative;
+  display: block;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px 0 0 4px;
+}
+
+.cci-idx a:hover {
+  background-color: var(--color--lightgray);
+  text-decoration: none;
+}
+
+.cci-idx a.cci-selected {
+  background-color: var(--color--salmon);
+  color: var(--color-txtwbg);
+  border: 1px solid var(--color--bordergray);
+}
+
+.cci-expanded {
+  position:relative;
+  float: right;
+  width: 66.6666666%;
+  border: 1px solid var(--color--bordergray);
+  border-radius: 0 4px 4px;
+  padding: 10px 25px;
+}
+
+/* Bajery */
+
+.cci-expanded:after {
+  content: "";
+  height: 70px;
+  width: 1px;  
+  position: absolute;  
+  left: -1px;
+  top: 65%;
+  transition: top, opacity;
+  transition-duration: 600ms;
+  transition-timing-function: ease;
+  background: linear-gradient(
+    transparent,
+    var(--color--salmon),
+    transparent
+  );
+  opacity: 0;
+}
+
+.cci-expanded:after {  
+  top: 65%;
+  opacity: 0;
+}
+
+.cci-expanded:hover:after {
+  top:25%;
+  opacity: 1;
+}
+
+/* Search results */
+
+#search-results {
+  width: 100%;
+}
+
+#search-results td, #search-results th {
+  padding: 1rem;
+}
+
+#search-results tr:nth-child(even) {
+  background-color: var(--color--lightgray);
+}
+
+#search-results tr:hover {
+  background-color: var(--color--salmon);
+  color: var(--color-txtwbg);
+}
+
+#search-results th {
+  color: var(--color--thgray);
+  font-weight: 400;
+  background-color: var(--color-txtwbg);
+}
+
+
+/* minor fixups */
+
+/* form.user-form .js-form-wrapper:not(:first-child) {
+  margin-top: 1em;
+} */
+
+/* ePportfolio presentation */
+
+body.path-portfolio .ep-usr-image {
+  float: left;
+  margin-left: 1.5em;
+  margin-bottom: 1.5em;
+  padding-right: calc(33.333% - 200px);
+}
+
+body.path-portfolio .ep-usr-image img {
+  border-radius: 5px;
+  border: 2px solid var(--color--txtwbg);
+}
+
+body.path-portfolio .ep-usr-name > h1,
+body.path-portfolio .ep-usr-name > h3 {
+  display: inline-block; 
+  margin-top: 0; 
+}
+
+body.path-portfolio .ep-usr-brief {
+  margin-top: 2em;
+  margin-bottom: 2.5em;
+  padding-bottom: 5em;
+}
+
+body.path-portfolio h1.page-header, 
+body.path-portfolio .ep-sub-group > h2 { 
+  display: none;
+}
+
+body.path-portfolio .ep-usr-brief > div > div,
+body.path-portfolio .ep-sub-group > div > div {
+  margin-bottom: 1.2em;
+}
+
+
+/* Content Containers Indexator */
+
+/* ---- TEST only ---- */
+.pudlo:not(.cci-expanded),
+.paka:not(.cci-expanded) {
+  display: none;
+}
+
+body.path-portfolio .ep-sub-group:not(.cci-expanded) {
+  display: none;
 }

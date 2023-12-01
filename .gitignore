@@ -1,0 +1,8 @@
+# Ignoring files/ directory
+files/
+# html page for testing locally
+test.html
+# css for testing
+test.css
+# search results page for testing
+search.html

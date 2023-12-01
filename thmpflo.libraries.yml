@@ -4,3 +4,6 @@ global-styling:
     theme:
       css/variables.css: {}
       css/base.css: {}
+  js:
+      scripts/searchSelect.js: {}
+
