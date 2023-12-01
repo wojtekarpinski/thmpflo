@@ -217,7 +217,7 @@ input:focus {
 
 .ep-usr-name {
   background: url(/themes/contrib/thmpflo/files/wzorek.png) no-repeat right,var(--color--salmon);
-  color: var(---color--txtwbg);
+  color: var(--color--txtwbg);
   background-size: 318px;
   border-radius: 5px;
   padding-top: 1em;
@@ -342,7 +342,7 @@ body.path-portfolio .ep-usr-image {
 
 body.path-portfolio .ep-usr-image img {
   border-radius: 5px;
-  border: 2px solid var(---color--txtwbg);
+  border: 2px solid var(--color--txtwbg);
 }
 
 body.path-portfolio .ep-usr-name > h1,
