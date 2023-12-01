@@ -139,7 +139,7 @@ button.sidebar:focus {
   width: 100%;
   border-radius: 5px 0px 0px 5px;
   border-color: var(--color--salmon);
-  color: white;
+  color: var(--color-txtwbg);
   background-color: var(--color--salmon);
 }
 
@@ -252,7 +252,7 @@ div.cci-idx > ul {
 
 .cci-idx a.cci-selected {
   background-color: var(--color--salmon);
-  color: white;
+  color: var(--color-txtwbg);
   border: 1px solid var(--color--bordergray);
 }
 
@@ -311,13 +311,13 @@ div.cci-idx > ul {
 
 #search-results tr:hover {
   background-color: var(--color--salmon);
-  color: white;
+  color: var(--color-txtwbg);
 }
 
 #search-results th {
   color: var(--color--thgray);
   font-weight: 400;
-  background-color: white;
+  background-color: var(--color-txtwbg);
 }
 
 
