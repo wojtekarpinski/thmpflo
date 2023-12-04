@@ -353,8 +353,9 @@ body.path-portfolio .ep-usr-brief {
   padding-bottom: 5em;
 }
 
-body.path-portfolio h1.page-header, 
-body.path-portfolio .ep-sub-group > h2 { 
+body.path-portfolio h1.page-header,
+body.path-szukaj h1.page-header,
+body.path-portfolio .ep-sub-group > h2 {
   display: none;
 }
 
