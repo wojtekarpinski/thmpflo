@@ -10,12 +10,12 @@ function searchSelect() {
         // searchForm.action = "/php/basicSearch.php"
         advancedFields.style.display = "none";
         basicField.style.display = "flex";
-        searchSwitch.innerHTML = "Wysukiwanie zaawansowane 🔽";
+        searchSwitch.innerHTML = "Wysukiwanie zaawansowane <span class=\"caret\"></span>";
     } else {
         basicField.style.display = "none";
         // searchForm.action ="/php/advancedSearch.php"
         advancedFields.style.display = "flex";
-        searchSwitch.innerHTML = "Proste wyszukiwanie 🔼";
+        searchSwitch.innerHTML = "Proste wyszukiwanie <span class=\"caret\"></span>";
     }
 
 
