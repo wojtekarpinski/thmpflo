@@ -10,12 +10,12 @@
       display: none;
   }
   #logo-uw-mobile {
-      display: block;
+      display: inline-block;
   }
 }
 
 #logo-uw-full {
-    display: block;
+    display: inline-block;
 }
 
 #logo-uw-full::after {
