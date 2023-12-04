@@ -15,7 +15,9 @@
 }
 
 #logo-uw-full {
-    display: inline-block;
+  background-image: url(/themes/contrib/thmpflo/files/logo/logo-uw-full.svg);
+  height: 59px;
+  display: inline-block;
 }
 
 #logo-uw-full::after {
