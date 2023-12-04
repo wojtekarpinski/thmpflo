@@ -15,7 +15,7 @@ function searchSelect() {
         basicField.style.display = "none";
         // searchForm.action ="/php/advancedSearch.php"
         advancedFields.style.display = "flex";
-        searchSwitch.innerHTML = "Proste wyszukiwanie <span class=\"caret\"></span>";
+        searchSwitch.innerHTML = "Proste wyszukiwanie <span class=\"caret\ dropup"></span>";
     }
 
 
