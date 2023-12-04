@@ -35,6 +35,10 @@ justify-content: flex-end;
   align-items: center;
 }
 
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
 /* Padding utilities */
 
 .padding-bottom-5 {
