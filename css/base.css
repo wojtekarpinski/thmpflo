@@ -14,15 +14,24 @@
   }
 }
 
-@media (min-width:769) {
-  #logo-uw-full {
-      display: block;
-      border-right: 1px solid var(--color--bordergray);
-  }
-  #logo-uw-mobile {
-      display: none;
-  }
+#logo-uw-full {
+    display: block;
 }
+
+#logo-uw-full::after {
+  content: " ";
+  float: right;
+  position: relative;
+  top: 10px;
+  height: 52px;
+  border-right: 1px solid var(--color--bordergray);
+
+}
+
+#logo-uw-mobile {
+    display: none;
+}
+
 
 
 /* Flex utilities */
