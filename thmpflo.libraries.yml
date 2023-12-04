@@ -4,6 +4,7 @@ global-styling:
     theme:
       css/variables.css: {}
       css/base.css: {}
+      css/responsive.css: {}
   js:
       scripts/searchSelect.js: {}
 
