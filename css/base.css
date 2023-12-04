@@ -7,10 +7,10 @@
 
 @media (max-width:768) {
   #logo-uw-full {
-      display: none;
-  }
+    display: none;
+  } 
   #logo-uw-mobile {
-      display: inline-block;
+    display: inline-block;
   }
 }
 
