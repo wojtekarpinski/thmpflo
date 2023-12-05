@@ -1,0 +1,244 @@
+/**
+ * @file
+ * Generic base elements.
+ */
+<<<<<<< HEAD
+
+
+/* Flex utilities */
+ 
+.flex-row-space-between {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+ 
+.flex-column {
+  display:flex;
+  flex-direction: column;
+}
+
+.flex-row-flex-end {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+=======
+ 
+ 
+/* Flex utilities */
+ 
+
+ 
+.flex-align-items-center {
+  align-items: center;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+}
+.flex-column {
+  display:flex;
+  flex-direction: column;
+}
+
+.flex-row-flex-end {
+display: flex;
+flex-direction: row;
+justify-content: flex-end;
+>>>>>>> 4e5de80b1d3cbefd97e2565ba79671591fb04026
+
+}
+
+.flex-row-space-between {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+/* Padding utilities */
+
+.padding-bottom-5 {
+  padding-bottom: 5px
+}
+
+.padding-bottom-15 {
+  padding-bottom: 15px
+}
+
+
+/* Homepage, navbar and footer branding and looks */
+
+.navbar-default .navbar-brand {
+  color: var(--color--come);
+}
+
+
+#block-thmpflo-informacjekontaktowe {
+  background-color: var(--color--lightgray);
+}
+
+.blurb {
+  background-image: url(../files/plama.svg);
+  background-position: right;
+  background-repeat: no-repeat;
+}
+
+footer.container-fluid {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+
+/* Buttons */
+
+.btn-salmon {
+  color:white;
+  background-color: var(--color--salmon);
+}
+
+button.sidebar {
+  width: 90%;
+  display: flex;
+  justify-content: flex-start;
+  margin: 2px;
+  padding: 1rem 2rem 1rem 2rem;
+  border-radius: 5px 5px 5px 5px;
+  border-style: solid; 
+  border-width: 1px;
+  border-color: lightgray;
+  background-color: var(--color--lightgray);
+}
+
+button.sidebar:focus {
+  width: 100%;
+  border-radius: 5px 0px 0px 5px;
+  border-color: var(--color--salmon);
+  color: white;
+  background-color: var(--color--salmon);
+}
+
+button.btn-salmon {
+  margin: 2px;
+  padding: 1rem 2rem 1rem 2rem;
+  border-radius: 5px 5px 5px 5px;
+  border-style: solid; 
+  border-width: 1px;
+  border-color: lightgray;
+  background-color: var(--color--salmon);
+  color:white;
+}
+
+button.btn-uw {
+  margin: 2px;
+  padding: 1rem 2rem 1rem 2rem;
+  border-radius: 0;
+  border-style: solid; 
+  border-width: 2px;
+  border-color: var(--color--uwblue);
+  background:none;
+}
+
+button:hover {
+  filter:brightness(0.98);
+}
+
+button.btn-uw:hover {
+  color: var(--color--salmon);
+  border-color: var(--color--salmon);
+  filter:brightness(1);
+}
+
+
+/* Search forms */
+
+input[type="search"] {
+  padding: 1rem;
+  border-radius: 5px;
+  border: solid 1px var(--color--bordergray);
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+input:focus {
+  outline:none;
+  border-color: var(--color--salmon);
+}
+
+button[type="submit"] {
+  width: 25%;
+}
+
+#search-selector {
+  width: 100%;
+  text-align: right;
+  border: none 1px;
+  border-top-style: solid;
+  border-color: var(--color--bordergray);
+  background: none;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+#advanced-search {
+  display: none;
+}
+
+
+/* Search results */
+
+#search-results {
+  width: 100%;
+}
+
+#search-results td, #search-results th {
+  padding: 1rem;
+}
+
+#search-results tr:nth-child(even) {
+  background-color: var(--color--lightgray);
+}
+
+#search-results tr:hover {
+  background-color: var(--color--salmon);
+  color: white;
+}
+
+#search-results th {
+  color: var(--color--thgray);
+  font-weight: 400;
+  background-color: white;
+}
+
+
+/* ePportfolio presentation */
+
+/* TODO: Add body class ? */
+
+.ep-usr-image              { float: right; margin-left: 1.5em; margin-bottom: 1.5em; }
+.ep-usr-image img          { border-radius: 5px; }
+.ep-usr-name > h1,
+.ep-usr-name > h3          { display: inline-block; margin-top: 0; }
+.ep-usr-brief              { margin-top: 2em; margin-bottom: 2.5em; }
+.ep-sub-group > h2         { display: none; }
+.ep-usr-brief > div > div,
+.ep-sub-group > div > div  { margin-bottom: 1.2em; }
+
+
+/* Content Containers Indexator */
+
+/* ---- TESTOWE ---- */
+.pudlo:not(.cci-expanded),
+.paka:not(.cci-expanded)
+{
+  display: none;
+}
+
+.ep-sub-group:not(.cci-expanded)
+{
+  display: none;
+}

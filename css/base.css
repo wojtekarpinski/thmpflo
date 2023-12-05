@@ -5,24 +5,34 @@
 
 /* Branding: logos shortening and widening */
 
-@media (max-width:768) {
+@media screen and (max-width:768) {
   #logo-uw-full {
     display: none;
-  } 
+  }
+
   #logo-uw-mobile {
     display: inline-block;
+    background-image: url(/themes/contrib/thmpflo/files/logo/logo-uw-mobile.svg);
+    background-position:left center;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    float: left;
+    height: 59px;
+    width: 60px;
+  }
+
+  #logo-ep-mobile {
+    display: inline-block;
+
   }
 }
 
 #logo-uw-full {
   background-image: url(/themes/contrib/thmpflo/files/logo/logo-uw-full.svg);
-  background-position:left center;
-  float: left;
-  height: 59px;
-  width: 205px;
-  display: inline-block;
+  width: 156px;
 
 }
+
 
 #logo-uw-full::after {
   content: " ";
@@ -30,15 +40,28 @@
   position: relative;
   top: 10px;
   height: 52px;
+  width: 20px;
   border-right: 1px solid var(--color--bordergray);
-
+  
 }
 
 #logo-uw-mobile {
-    display: none;
+  display: none;
 }
 
+#logo-ep-full {
+ background-image: url("/themes/contrib/thmpflo/files/logo/logo-eportfolio.svg");
+ width: 200px;
+ margin-left:20px;
+}
 
+#logo-uw-full, #logo-ep-full {
+  background-position:left center;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  float: left;
+  height: 59px;
+}
 
 /* Flex utilities */
  
@@ -129,23 +152,37 @@ div[data-off-canvas-main-canvas=""] {
   color: var(--color--come);
 }
 
-
-#block-thmpflo-informacjekontaktowe {
-  background-color: var(--color--lightgray);
+#frontpage-content{
+  text-align: justify;
+  text-justify: inter-word;
 }
 
-#mainpage-content {
+body.path-frontpage #search-container {
+  width: 69%;
+}
+
+.w-80 {
+  width: 80%;
+}
+
+
+
+/* Dodanie tła na cały region-content */
+body.path-frontpage div.region-content { 
   background-image:url("../files/ludz.svg"), url(../files/plama.svg);
   background-position: right;
   background-repeat: no-repeat;
-  height: 100%;
 }
 
-
-footer.container-fluid {
+/* Dodanie szarego tła na całej szerokości przy informacjach kontaktowych */
+footer.container-fluid { 
   padding-left: 0;
   padding-right: 0;
   width:100%;
+}
+
+#block-thmpflo-informacjekontaktowe {
+  background-color: var(--color--lightgray);
 }
 
 /* ul, li */
@@ -157,10 +194,10 @@ footer.container-fluid {
 
 /* Buttons */
 
-.btn-salmon {
+/* .btn-salmon {
   color:white;
   background-color: var(--color--salmon);
-}
+} */
 
 button.sidebar {
   width: 90%;
@@ -183,15 +220,33 @@ button.sidebar:focus {
   background-color: var(--color--salmon);
 }
 
+button.btn-primary, button.btn-primary:active, button.btn-primary:focus, button.btn-primary:visited {
+  margin: 2px;
+  padding: 1rem 2rem 1rem 2rem;
+  border-radius: 5px 5px 5px 5px;
+  border-style: solid; 
+  border-width: 1px;
+  border-color: var(--color--bordergray);
+  background-color: var(--color--salmon) !important;
+  color:var(--color--txtwbg);
+}
+
+button.btn-primary:hover {
+  border-color: var(--color--bordergray);
+  background-color: var(--color--salmon);
+  color:var(--color--txtwbg);
+  filter:brightness(0.98);
+}
+
 button.btn-salmon {
   margin: 2px;
   padding: 1rem 2rem 1rem 2rem;
   border-radius: 5px 5px 5px 5px;
   border-style: solid; 
   border-width: 1px;
-  border-color: lightgray;
+  border-color: var(--color--bordergray);
   background-color: var(--color--salmon);
-  color:white;
+  color:var(--color--txtwbg);
 }
 
 button.btn-uw {
@@ -221,7 +276,7 @@ div #search {
   width: 66.66%;
 }
 
-input[type="search"] {
+input.form-control {
   padding: 1rem;
   border-radius: 5px;
   border: solid 1px var(--color--bordergray);
@@ -229,9 +284,10 @@ input[type="search"] {
   margin-bottom: 0.5rem;
 }
 
-input:focus {
+input.form-control:focus {
   outline:none;
   border-color: var(--color--salmon);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,0.075), 0 0 8px rgba(255,137,131, 0.6) ;
 }
 
 /* button[type="submit"] {

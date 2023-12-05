@@ -1,0 +1,32 @@
+{#
+/**
+ * @file
+ * Default theme implementation of a views exposed form.
+ *
+ * Available variables:
+ * - form: A render element representing the form.
+ *
+ * @ingroup templates
+ *
+ * @see template_preprocess_views_exposed_form()
+ */
+#}
+{% if q is not empty %}
+  {#
+    This ensures that, if clean URLs are off, the 'q' is added first,
+    as a hidden form element, so that it shows up first in the POST URL.
+  #}
+  {{ q }}
+{% endif %}
+<div id="search-container" class="clearfix">
+  <div id="basic-search">
+    <input class="form-text form-control"/>
+    <div id="submit-search"> <!--class="flex-row-flex-end"-->
+      <button class="btn-primary btn icon-before" type="submit" value="Szukaj"><span class="icon glyphicon glyphicon-search" aria-hidden="true"></span>Szukaj</button>
+    </div>
+  </div>
+  <div id="advanced-search" class="flex-column">
+    {{ form }}
+  </div>
+  <button onmousedown="searchSelect()" id="search-selector">Wyszukiwanie zaawansowane <span class="caret"></span></button>
+</div>
