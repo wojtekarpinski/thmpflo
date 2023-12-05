@@ -5,55 +5,86 @@
 
 /* Branding: logos shortening and widening */
 
-@media screen and (max-width:768) {
-  #logo-uw-full {
-    display: none;
-  }
-
+@media screen and (max-width:768px) {
   #logo-uw-mobile {
-    display: inline-block;
+    display:inline-block;
     background-image: url(/themes/contrib/thmpflo/files/logo/logo-uw-mobile.svg);
     background-position:left center;
     background-size: auto 100%;
     background-repeat: no-repeat;
-    float: left;
     height: 59px;
     width: 60px;
+    float: left;
+  }
+ 
+  #logo-uw-full {
+    display: none;
   }
 
-  #logo-ep-mobile {
+  #logo-ep-full {
+    display:none;
+  }
+
+    #logo-ep-mobile {
     display: inline-block;
-
+    background-image: url("/themes/contrib/thmpflo/files/logo/logo-eportfolio.svg");
+    background-size: auto 100%;
+    height: 59px;
+    width: 200px;
+    margin-left:20px;
+    background-repeat: no-repeat;
+  }  
+  @media screen and (max-width:600px) {
+    #logo-ep-mobile {
+      width: 60px;
+    }
   }
 }
 
-#logo-uw-full {
-  background-image: url(/themes/contrib/thmpflo/files/logo/logo-uw-full.svg);
-  width: 156px;
-
-}
-
-
-#logo-uw-full::after {
-  content: " ";
-  float: right;
-  position: relative;
-  top: 10px;
-  height: 52px;
-  width: 20px;
-  border-right: 1px solid var(--color--bordergray);
+@media screen and (min-width:768px) {
+  #logo-uw-mobile {
+    display: none;
+  }
   
+  #logo-ep-mobile {
+    display:none;
+  }
+
+  #logo-ep-full {
+    display:inline-block;
+    background-image: url("/themes/contrib/thmpflo/files/logo/logo-eportfolio.svg");
+    width: 200px;
+    margin-left:20px;
+   }
+
+   #logo-uw-full {
+    background-image: url(/themes/contrib/thmpflo/files/logo/logo-uw-full.svg);
+    width: 156px;
+  
+  }
+
 }
 
-#logo-uw-mobile {
-  display: none;
+@media screen and (max-width: 700px) {
+  body.path-frontpage div.region-content { 
+    background-image:url("../files/ludz.svg"), url(../files/plama.svg);
+    background-position: 120% 0%, right;
+    background-repeat: no-repeat;
+
 }
 
-#logo-ep-full {
- background-image: url("/themes/contrib/thmpflo/files/logo/logo-eportfolio.svg");
- width: 200px;
- margin-left:20px;
+  #logo-uw-full::after {
+    content: " ";
+    float: right;
+    position: relative;
+    top: 10px;
+    height: 52px;
+    width: 20px;
+    border-right: 1px solid var(--color--bordergray);
+    
+  }
 }
+
 
 #logo-uw-full, #logo-ep-full {
   background-position:left center;
@@ -168,10 +199,14 @@ body.path-frontpage #search-container {
 
 
 /* Dodanie tła na cały region-content */
-body.path-frontpage div.region-content { 
-  background-image:url("../files/ludz.svg"), url(../files/plama.svg);
-  background-position: right;
-  background-repeat: no-repeat;
+
+@media screen and (min-width:700px) {
+  body.path-frontpage div.region-content { 
+    background-image:url("../files/ludz.svg"), url(../files/plama.svg);
+    background-position: right;
+    background-repeat: no-repeat;
+  }
+  
 }
 
 /* Dodanie szarego tła na całej szerokości przy informacjach kontaktowych */
