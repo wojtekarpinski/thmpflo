@@ -6,4 +6,6 @@ global-styling:
       css/base.css: {}
   js:
       scripts/searchSelect.js: {}
+      # scripts/responsive-portfolio.js: {}
+      scripts/setProfileColor.js: {}
 
