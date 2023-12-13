@@ -151,6 +151,11 @@ justify-content: flex-end;
 
 }
 
+.flex-row-reverse {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
 .flex-row-space-between {
   display: flex;
   flex-direction: row;
@@ -196,6 +201,47 @@ justify-content: flex-end;
   padding-bottom: 15px;
 }
 
+/* High contrast */
+
+body.high-contrast *{
+  color: var(--color--hc--yellow);
+  background-color: black;
+  --color--txtwbg: var(--color--hc--yellow);
+  --color--accent: black; 
+  --color-bordergray: var(--color--hc--yellow);
+
+}
+
+body.high-contrast a {
+  text-decoration: underline;
+}
+
+body.high-contrast a:hover, body.high-contrast a:focus {
+  text-decoration: none;
+  background:none;
+}
+
+body.high-contrast #toggle-high-contrast {
+  text-decoration: none;
+}
+
+body.high-contrast a#toggle-high-contrast:hover {
+  color: #FFFF00;
+  text-decoration: none;
+  opacity: 0.9;
+}
+
+body.high-contrast .ep-usr-name{
+  background-image: none;
+}
+
+body.high-contrast #block-thmpflo-branding-2 *, body.high-contrast #block-thmpflo-fundatorzy *{
+  background-color: white;
+}
+
+body.path-frontpage.high-contrast div.region-content {
+  background-image:none;
+}
 
 /* Homepage, navbar and footer branding and looks */
 
@@ -203,18 +249,35 @@ justify-content: flex-end;
   font-size:large;
 }
 
-/* body {
+#toggle-high-contrast{
+  font-size: 32px;
+}
+
+#toggle-high-contrast:hover{
+  color: var(--color--accent);
+}
+
+#toggle-high-contrast:focus{
+  background:none;
+}
+
+
+ /* body {
   min-height: 100vh;
   margin:0;
   display:grid;
   grid-template-rows: 1fr auto auto;
-} */
+}  */
+
+#ep-nav > * {
+  padding-left:10px;
+}
 
 div[data-off-canvas-main-canvas=""] {
   min-height:100vh;
   margin:0;
   display: grid;
-  grid-template-rows: auto 1fr auto;
+  grid-template-rows: 1fr auto;
 }
 
 
