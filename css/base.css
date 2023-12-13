@@ -619,6 +619,16 @@ body.path-portfolio .ep-subgroup .cci-expanded > h2 {
   border: 1px solid var(--color--bordergray);
 }
 
+/* FIXES */
+
+/* Display label of form when multiple field instances */
+
+.label > h4 {
+  color:#333;
+  font-size: 14px;
+}
+
+
 /* Content Containers Indexator */
 
 /* ---- TEST only ---- */
