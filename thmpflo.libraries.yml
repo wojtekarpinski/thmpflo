@@ -4,6 +4,10 @@ global-styling:
     theme:
       css/variables.css: {}
       css/base.css: {}
+      css/icomoon.css: {}
   js:
       scripts/searchSelect.js: {}
+      # scripts/responsive-portfolio.js: {}
+      scripts/toggleHighContrast.js: {}
+      scripts/setProfileColor.js: {}
 
