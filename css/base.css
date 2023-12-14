@@ -93,6 +93,10 @@
 }
 
 @media screen and (min-width:768px) {
+  body {
+    margin-top: 0;
+  }
+  
   #logo-uw-mobile {
     display: none;
   }
@@ -108,10 +112,27 @@
     margin-left:20px;
    }
 
+   body.path-user #logo-ep-full, body.path-portfolio #logo-ep-full {
+    display:inline-block;
+    background-image: url("/themes/contrib/thmpflo/files/logo/logo-eportfolio-bez-sygnetu.svg");
+    width: 200px;
+    margin-left:-50px;
+   }
+
    #logo-uw-full {
     background-image: url(/themes/contrib/thmpflo/files/logo/logo-uw-full.svg);
     width: 156px;
   
+  }
+  #logo-uw-full::after {
+    content: " ";
+    float: right;
+    position: relative;
+    top: 10px;
+    height: 52px;
+    width: 20px;
+    border-right: 1px solid var(--color--bordergray);
+    
   }
 
 }
@@ -567,14 +588,18 @@ div.cci-idx > ul {
 
 /* ePportfolio presentation */
 
-body.path-portfolio .ep-usr-image {
+#usr-pers-data {
+  min-height: 280px;
+}
+
+body.path-portfolio .ep-usr-image, body.path-user .ep-usr-image {
   float: left;
   margin-left: 1.5em;
   margin-bottom: 1.5em;
-  padding-right: calc(33.333% - 200px);
+  padding-right: calc(20% - 200px);
 }
 
-body.path-portfolio .ep-usr-image img {
+body.path-portfolio .ep-usr-image img, body.path-user .ep-usr-image img {
   border-radius: 5px;
   border: 2px solid var(--color--txtwbg);
 }
@@ -607,6 +632,85 @@ body.path-portfolio .ep-subgroup .cci-expanded > h2 {
   color:var(--color--txtwbg);
   border: 0;
 }
+
+/* Con jobs presentation */
+
+#usr-con-job .field--item > article > div , .grid-column-1-1{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+ #usr-con-job .field--items{
+  display:flex;
+  flex-direction: column;
+}
+
+#usr-con-job .field--items, #usr-contact-data {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid var(--color--bordergray);
+}
+
+.field--name-field-usr-pers-webpage-url .field--items {
+  display:flex;
+  flex-direction: row;
+  gap: 5px;
+}
+
+.field--name-field-usr-pers-webpage-url {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+/* User edit form preferred colors */
+
+#edit-field-usr-profile-color input {
+  margin-left: -45px;
+}
+
+#edit-field-usr-profile-color--wrapper label[for^="edit-field-usr-profile-color-"] {
+  padding-left: 50px;
+}
+
+#edit-field-usr-profile-color--wrapper label[for^="edit-field-usr-profile-color-"]::before {
+  content:"";
+  position:absolute;
+  height: 20px;
+  width: 20px;
+  margin-left: -25px;
+}
+
+#edit-field-usr-profile-color--wrapper label[for="edit-field-usr-profile-color-default"]::before {
+  background-color: var(--color--pflo--salmon);
+}
+#edit-field-usr-profile-color--wrapper label[for="edit-field-usr-profile-color-green"]::before {
+  background-color: var(--color--pflo--green);
+}
+#edit-field-usr-profile-color--wrapper label[for="edit-field-usr-profile-color-blue"]::before {
+  background-color: var(--color--pflo--blue);
+}
+#edit-field-usr-profile-color--wrapper label[for="edit-field-usr-profile-color-uwblue"]::before {
+  background-color: var(--color--pflo--uwblue);
+}
+#edit-field-usr-profile-color--wrapper label[for="edit-field-usr-profile-color-red"]::before {
+  background-color: var(--color--pflo--red);
+}
+#edit-field-usr-profile-color--wrapper label[for="edit-field-usr-profile-color-orange"]::before {
+  background-color: var(--color--pflo--orange);
+}
+#edit-field-usr-profile-color--wrapper label[for="edit-field-usr-profile-color-purple"]::before {
+  background-color: var(--color--pflo--purple);
+}
+#edit-field-usr-profile-color--wrapper label[for="edit-field-usr-profile-color-gray"]::before {
+  background-color: var(--color--pflo--gray);
+}
+
+/* Hiding empty radio */
+
+#edit-field-usr-profile-color--wrapper label[for="edit-field-usr-profile-color-none"] {
+  display: none;
+}
+
 
 /*  */
 
