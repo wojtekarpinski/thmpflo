@@ -1,0 +1,26 @@
+
+================================================================================
+DBG POINT : thmpflo_preprocess_user
+IN SCRIPT : /data/dev-eportfolio-pracownik/web/themes/contrib/thmpflo/thmpflo.theme : Line 19
+ON SERVER : dev-eportfolio-pracownik.ckc.uw.edu.pl
+--------------------------------------------------------------------------------
+Array
+(
+    [0] => __construct
+    [1] => createInstance
+    [2] => view
+    [3] => trustedCallbacks
+    [4] => viewMultiple
+    [5] => build
+    [6] => buildMultiple
+    [7] => buildComponents
+    [8] => getCacheTags
+    [9] => resetCache
+    [10] => viewField
+    [11] => viewFieldItem
+    [12] => setModuleHandler
+    [13] => setStringTranslation
+    [14] => __sleep
+    [15] => __wakeup
+)
+

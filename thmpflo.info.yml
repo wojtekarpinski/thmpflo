@@ -1,6 +1,6 @@
 name: 'ePortfolio'
 type: theme
-base theme: bootstrap
+base theme: 'bootstrap'
 core_version_requirement: ^9.5 || ^10
 description: 'Custom theme for ePortfolio site, based on the <em>Bootstrap</em> theme. Created by <a href="https://ckc.uw.edu.pl/">CKC UW</a>.'
 package: 'ePortfolio'

@@ -1,0 +1,118 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in the ePortfolio theme.
+ */
+
+
+/**
+ * Implements template_preprocess_user ().
+ */
+function thmpflo_preprocess_user (&$vars) 
+{
+//    glbsn_var_dump ($vars['elements']['#pre_render'], 2);
+
+  $cos = get_class_methods ($vars['elements']['#pre_render'][0][0]);
+
+  $dumpTo  = '/data/dev-eportfolio-pracownik/web/themes/contrib/thmpflo/zsys_dump.txt';
+  file_put_contents ($dumpTo, "\n");
+  file_put_contents ($dumpTo, str_repeat ('=', 80)."\n", FILE_APPEND);
+  file_put_contents ($dumpTo, 'DBG POINT : '.(__METHOD__ == '' ? 'script level' : __METHOD__)."\n", FILE_APPEND);
+  file_put_contents ($dumpTo, 'IN SCRIPT : '.__FILE__.' : Line '.(__LINE__ - 3)."\n", FILE_APPEND);
+  file_put_contents ($dumpTo, 'ON SERVER : '.$_SERVER['HTTP_HOST']."\n", FILE_APPEND);
+  file_put_contents ($dumpTo, str_repeat ('-', 80)."\n", FILE_APPEND);
+  file_put_contents ($dumpTo, print_r ($cos, true)."\n", FILE_APPEND);
+
+// PATH to value:
+//    $cos = $vars['elements']['field_usr_firstname']['#items']->getValue ();
+//    $cos = $cos[0]['value'];
+}
+
+
+
+
+
+
+function glbsn_var_dump ($var, $o2aMode = 1, $depth = 0)
+{
+  /**
+   * Values for controling conversion of the object to array prior to dump (o2aMode):
+   *  0 : No object dump
+   *  1 : No conversion (default)
+   *  2 : Cast object to array
+   *  3 : Use JSON encode/decode
+   */
+
+  $dumpTo  = '/data/dev-eportfolio-pracownik/web/themes/contrib/thmpflo/zsys_dump.txt';
+  $indent  = '    ';
+
+
+  $indent = str_repeat ($indent, $depth);
+
+  if ($depth == 0)
+  {
+    file_put_contents ($dumpTo, "\n");
+    file_put_contents ($dumpTo, str_repeat ('=', 80)."\n", FILE_APPEND);
+    file_put_contents ($dumpTo, 'DBG POINT : '.(__METHOD__ == '' ? 'script level' : __METHOD__)."\n", FILE_APPEND);
+    file_put_contents ($dumpTo, 'IN SCRIPT : '.__FILE__.' : Line '.(__LINE__ - 3)."\n", FILE_APPEND);
+    file_put_contents ($dumpTo, 'ON SERVER : '.$_SERVER['HTTP_HOST']."\n", FILE_APPEND);
+    file_put_contents ($dumpTo, str_repeat ('-', 80)."\n", FILE_APPEND);
+  }
+
+  $type = gettype ($var);
+  if ($type == 'boolean')
+  {
+    file_put_contents ($dumpTo, $indent.'('.$type.') '.($v ? 'TRUE' : 'FALSE')."\n", FILE_APPEND);
+  }
+  elseif ($type != 'object' && $type != 'array')
+  {
+    file_put_contents ($dumpTo, $indent.'('.$type.') '.print_r ($v, true)."\n", FILE_APPEND);
+  }
+  else 
+  {
+    if ($type == 'object') switch ($o2aMode)
+    {
+      case 3:
+        $var = json_decode (json_encode ($var), true);
+        break;
+      case 2:
+        $var = (array) $var;
+        break;
+      case 1:
+      case 0:
+      default:
+    }
+
+    foreach ($var as $k => $v)
+    {
+      $type = gettype ($v);
+      file_put_contents ($dumpTo, $indent.$k.' : ('.$type.') ', FILE_APPEND);
+      switch ($type)
+      {
+        case 'object':
+          if ($o2aMode != 0)
+          {
+            file_put_contents ($dumpTo, "\n".$indent.'('."\n", FILE_APPEND);
+            glbsn_var_dump ($v, $o2aMode, $depth + 1);
+            file_put_contents ($dumpTo, $indent.')'."\n", FILE_APPEND);
+          }
+          else 
+          {
+            file_put_contents ($dumpTo, '...'."\n", FILE_APPEND);            
+          }
+          break;
+        case 'array':
+          file_put_contents ($dumpTo, "\n".$indent.'('."\n", FILE_APPEND);
+          glbsn_var_dump ($v, $o2aMode, $depth + 1);
+          file_put_contents ($dumpTo, $indent.')'."\n", FILE_APPEND);
+          break;
+        case 'boolean':
+          file_put_contents ($dumpTo, ($v ? 'TRUE' : 'FALSE')."\n", FILE_APPEND);
+          break;
+        default:
+          file_put_contents ($dumpTo, print_r ($v, true)."\n", FILE_APPEND);
+      }
+    }
+  }
+}
