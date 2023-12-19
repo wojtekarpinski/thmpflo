@@ -8,6 +8,7 @@ global-styling:
   js:
       scripts/searchSelect.js: {}
       # scripts/responsive-portfolio.js: {}
+      scripts/toggleLargerText.js: {}
       scripts/toggleHighContrast.js: {}
       scripts/setProfileColor.js: {}
 

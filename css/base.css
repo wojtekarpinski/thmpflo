@@ -221,8 +221,15 @@ justify-content: flex-end;
   padding-top: 15px;
   padding-bottom: 15px;
 }
+/* ACCESSIBILITY FEATURES */
+  /* Larger font size */
+  
+  body.larger-text, body .larger-text{
+    font-size: 16px;
+  }
+  
 
-/* High contrast */
+  /* High contrast */
 
 body.high-contrast *{
   color: var(--color--hc--yellow);
@@ -267,7 +274,8 @@ body.path-frontpage.high-contrast div.region-content {
 /* Homepage, navbar and footer branding and looks */
 
 .about {
-  font-size:large;
+  margin-top: 1.5em;
+  font-size:20px;
 }
 
 #toggle-high-contrast{
@@ -301,6 +309,9 @@ div[data-off-canvas-main-canvas=""] {
   grid-template-rows: 1fr auto;
 }
 
+#block-thmpflo-branding {
+  margin-bottom:2em;
+}
 
 .navbar-default .navbar-brand {
   color: var(--color--come);
@@ -589,13 +600,13 @@ div.cci-idx > ul {
 /* ePportfolio presentation */
 
 #usr-pers-data {
-  min-height: 280px;
+  min-height: 300px;
 }
 
 body.path-portfolio .ep-usr-image, body.path-user .ep-usr-image {
   float: left;
   margin-left: 1.5em;
-  margin-bottom: 1.5em;
+  /* margin-bottom: 1.5em; -- useless */
   padding-right: calc(20% - 200px);
 }
 
@@ -633,7 +644,47 @@ body.path-portfolio .ep-subgroup .cci-expanded > h2 {
   border: 0;
 }
 
-/* Con jobs presentation */
+/* USER BRIEF */
+
+  /*Temporary changes: hide h1, add margin top*/
+
+  body.path-user h1.page-header {
+    display: none;
+  }
+
+  #usr-pers-data {
+    margin-top: 1em;
+  }
+
+
+  /* NAME SURNAME */
+
+  body.path-user .field--name-field-usr-firstname, body.path-user .field--name-field-usr-surname {
+    display: inline-block;
+    font-size: 36px;
+  }
+  
+  body.path-user .field--name-field-usr-firstname::after {
+    content:"\a0";
+  }
+
+
+  /* JOBS, CONTACTS, LINKS centering */
+
+#usr-jobs-contact-links {
+  min-height: 170px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+  /*Link separator */
+.field--name-field-usr-pers-webpage-url .field--items div:not(:last-child)::after {
+  content:",\20"
+}
+
+  /* Con jobs presentation */
 
 #usr-con-job .field--item > article > div , .grid-column-1-1{
   display:grid;
@@ -711,6 +762,34 @@ body.path-portfolio .ep-subgroup .cci-expanded > h2 {
   display: none;
 }
 
+
+/* USER elements spacing */
+
+body.path-user div[class*="field--name-field-usr-"]:not(#usr-pers-data div[class*="field--name-field-usr-"]) {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+body.path-user .panel-body {
+  padding-top: 0;
+}
+
+body.path-user div.tab-content div.field:nth-child(n+1) div.field--item {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  margin-left: 0.5em;
+}
+
+
+/* USER elements listing*/
+
+body.path-user div.tab-content div.field--item article {
+  margin-left: 1em;
+}
+
+body.path-user div.tab-content div.field--item article > h5 > span {
+  display:list-item;
+}
 
 /*  */
 
