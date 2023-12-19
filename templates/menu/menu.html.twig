@@ -23,7 +23,13 @@
   {% if items %}
     <ul{{ attributes.addClass(menu_level == 0 ? classes : dropdown_classes) }}>
     <li>
-      <a id="toggle-high-contrast" href="#" class="pull-right icon icon-eye" aria-hidden="true"></a>
+      <a id="toggle-regular-text" href="#" title="Przywróć standardowy rozmiar czcionki.">A</a>
+    </li>    
+    <li>
+      <a id="toggle-larger-text" href="#" class="larger-text" title="Powiększ rozmiar czcionki.">A</a>
+    </li>
+    <li>
+      <a id="toggle-high-contrast" href="#" class="icon icon-eye" aria-hidden="true"></a>
     </li>
     {% for item in items %}
       {%
