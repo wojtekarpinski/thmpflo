@@ -3,150 +3,8 @@
  * Generic base elements.
  */
 
-/* Branding: logos shortening and widening */
-
-@media screen and (max-width:768px) {
-  #logo-uw-mobile {
-    display:inline-block;
-    background-image: url(/themes/contrib/thmpflo/files/logo/logo-uw-mobile.svg);
-    background-position:left center;
-    background-size: auto 100%;
-    background-repeat: no-repeat;
-    height: 59px;
-    width: 60px;
-    float: left;
-  }
- 
-  #logo-uw-full {
-    display: none;
-  }
-
-  #logo-ep-full {
-    display:none;
-  }
-
-    #logo-ep-mobile {
-    display: inline-block;
-    background-image: url("/themes/contrib/thmpflo/files/logo/logo-eportfolio.svg");
-    background-size: auto 100%;
-    height: 59px;
-    width: 200px;
-    margin-left:20px;
-    background-repeat: no-repeat;
-  }  
-  @media screen and (max-width: 700px) {
-    body.path-frontpage div.region-content { 
-      background-image:url("../files/ludz.svg"), url(../files/plama.svg);
-      background-position: 120% 0%, right;
-      background-repeat: no-repeat;
-      background-size: auto, auto 100%;
-      background-blend-mode: normal;
-    }
-  
-    #logo-uw-full::after {
-      content: " ";
-      float: right;
-      position: relative;
-      top: 10px;
-      height: 52px;
-      width: 20px;
-      border-right: 1px solid var(--color--bordergray);
-      
-    }
-
-    #contact-info {
-      flex-direction: column;
-    }
-
-    @media screen and (max-width:600px) {
-      #logo-ep-mobile {
-        width: 60px;
-      }
-      body.path-frontpage div.region-content {
-        background-image:url(../files/plama.svg), url("../files/ludz.svg");
-        background-position: right, 350px 0%;
-        background-size: auto 100%, auto;
-        background-blend-mode: hard-light;
-        
-      }
-
-      @media screen and (max-width:435px) {
-        #logo-ue {
-          height: 59px;
-          width: 100px;
-          object-fit: cover;
-          object-position: right;
-        }
-        body.path-frontpage div.region-content {
-          background-position: right, 220px 0%;
-        }
-
-          @media screen and (max-width:360px) {
-            body.path-frontpage div.region-content {
-              background-position: right, 120px 0%;
-            }
-
-          }
-      }
-    }
-  }
-}
-
-@media screen and (min-width:768px) {
-  body {
-    margin-top: 0;
-  }
-  
-  #logo-uw-mobile {
-    display: none;
-  }
-  
-  #logo-ep-mobile {
-    display:none;
-  }
-
-  #logo-ep-full {
-    display:inline-block;
-    background-image: url("/themes/contrib/thmpflo/files/logo/logo-eportfolio.svg");
-    width: 200px;
-    margin-left:20px;
-   }
-
-   body.path-user #logo-ep-full, body.path-portfolio #logo-ep-full {
-    display:inline-block;
-    background-image: url("/themes/contrib/thmpflo/files/logo/logo-eportfolio-bez-sygnetu.svg");
-    width: 200px;
-    margin-left:-50px;
-   }
-
-   #logo-uw-full {
-    background-image: url(/themes/contrib/thmpflo/files/logo/logo-uw-full.svg);
-    width: 156px;
-  
-  }
-  #logo-uw-full::after {
-    content: " ";
-    float: right;
-    position: relative;
-    top: 10px;
-    height: 52px;
-    width: 20px;
-    border-right: 1px solid var(--color--bordergray);
-    
-  }
-
-}
 
 
-
-
-#logo-uw-full, #logo-ep-full {
-  background-position:left center;
-  background-size: auto 100%;
-  background-repeat: no-repeat;
-  float: left;
-  height: 59px;
-}
 
 /* Flex utilities */
  
@@ -221,11 +79,24 @@ justify-content: flex-end;
   padding-top: 15px;
   padding-bottom: 15px;
 }
+
+/* margin utilities */
+
+.margin-bottom-5 {
+  margin-bottom:5px;
+}
+
 /* ACCESSIBILITY FEATURES */
   /* Larger font size */
   
   body.larger-text, body .larger-text{
     font-size: 16px;
+  }
+  
+  /* Smaller font size */
+
+  body.smaller-text, body .smaller-text{
+    font-size: 12px !important;
   }
   
 
@@ -254,7 +125,7 @@ body.high-contrast #toggle-high-contrast {
 }
 
 body.high-contrast a#toggle-high-contrast:hover {
-  color: #FFFF00;
+  color:var(--color--hc--yellow);
   text-decoration: none;
   opacity: 0.9;
 }
@@ -263,7 +134,17 @@ body.high-contrast .ep-usr-name{
   background-image: none;
 }
 
-body.high-contrast #block-thmpflo-branding-2 *, body.high-contrast #block-thmpflo-fundatorzy *{
+body.high-contrast button:hover{
+  color:var(--color--hc--yellow);
+  border: 2px dashed var(--color--hc--yellow);
+  text-decoration: underline;
+}
+
+ body.high-contrast #contact-info img {
+  filter:grayscale(100%) brightness(10);
+} 
+
+body.high-contrast #block-thmpflo-branding *, body.high-contrast #block-thmpflo-brandingwidokportfolio *, body.high-contrast #block-thmpflo-fundatorzy *{
   background-color: white;
 }
 
@@ -271,7 +152,13 @@ body.path-frontpage.high-contrast div.region-content {
   background-image:none;
 }
 
+
+
 /* Homepage, navbar and footer branding and looks */
+
+html body {
+  font-family: BlinkMacSystemFont,-apple-system,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+}
 
 .about {
   margin-top: 1.5em;
@@ -289,6 +176,61 @@ body.path-frontpage.high-contrast div.region-content {
 #toggle-high-contrast:focus{
   background:none;
 }
+
+/* dodane z THMEPC */
+
+
+li.text-size a{
+  padding-left: 1px;
+}
+li.text-size:not(:last-child) a{
+  padding-right: 2px;
+}
+
+li.text-size:hover, li.text-size a:focus {
+  background-color:white;
+}
+li.text-size a:hover {
+  background-color: white;
+  color:var(--color--pflo--salmon);
+}
+
+#toggle-regular-text {
+  font-size: 14px;
+}
+#toggle-smaller-text {
+  font-size: 12px;
+}
+#toggle-larger-text {
+  font-size: 16px;
+}
+
+body.larger-text ul li.text-size {
+  #toggle-larger-text {
+    text-decoration: underline; 
+  }
+  #toggle-smaller-text {
+    text-decoration: none;
+  }
+  #toggle-regular-text {
+    text-decoration: none; 
+  }
+}
+body.smaller-text ul li.text-size {
+  #toggle-smaller-text {
+    text-decoration: underline;
+  }
+  #toggle-larger-text {
+    text-decoration: none; 
+  }
+  #toggle-regular-text {
+    text-decoration: none; 
+  }
+}
+
+body:not(.smaller-text):not(.larger-text) ul li.text-size #toggle-regular-text{
+  text-decoration: underline;
+} 
 
 
  /* body {
@@ -607,7 +549,8 @@ body.path-portfolio .ep-usr-image, body.path-user .ep-usr-image {
   float: left;
   margin-left: 1.5em;
   /* margin-bottom: 1.5em; -- useless */
-  padding-right: calc(20% - 200px);
+  /* padding-right: calc(20% - 200px); -- causing problems in lower vw */
+  padding-right: 30px; /* FIX */
 }
 
 body.path-portfolio .ep-usr-image img, body.path-user .ep-usr-image img {
@@ -712,6 +655,22 @@ body.path-portfolio .ep-subgroup .cci-expanded > h2 {
   padding-top: 5px;
   padding-bottom: 5px;
 }
+
+.field--name-field-usr-jobs article div[class*="field--name-field-job-"] > .field--item {
+  display: flex;
+}
+
+/* User research topics */
+#edit-group-usr-dsp-scientific--content .field--name-field-usr-research-keywords .field--items > .field--item {
+
+  display: inline-block;
+  background: var(--color--accent);
+  color: var(--color--txtwbg);
+  padding: 5px;
+  border: 1px solid var(--color--accent);
+  border-radius: 5px;
+}
+
 
 /* User edit form preferred colors */
 
