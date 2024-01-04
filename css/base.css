@@ -177,6 +177,10 @@ html body {
   background:none;
 }
 
+nav a {
+  color: var(--color--pflo--uwblue);
+}
+
 /* dodane z THMEPC */
 
 
