@@ -181,6 +181,8 @@ nav a {
   color: var(--color--pflo--uwblue);
 }
 
+
+
 /* dodane z THMEPC */
 
 
@@ -725,6 +727,44 @@ body.path-portfolio .ep-subgroup .cci-expanded > h2 {
 #edit-field-usr-profile-color--wrapper label[for="edit-field-usr-profile-color-none"] {
   display: none;
 }
+
+/* User education styling */
+
+#usr-education--content{
+  article {
+    padding-top:1em;
+    padding-bottom:1em;
+
+    li div {
+      .field--label {
+        float:none;
+      }
+      .field--label:before {
+        content:' ';
+        display:block;
+      }
+      display: inline;
+    }
+  }
+
+  .field--name-field-aux-year-mod:after {
+    content:" -";
+  }
+
+  .field--name-field-aux-degree {
+    font-weight: bold;
+  }
+
+  .field--name-field-aux-degree:after {
+    content: ":"
+  }
+
+  .field--name-field-instytute:after, .field--name-field-department:after, .field--name-field-university-or-institution:after{
+    content:",";
+  }
+}
+
+
 
 
 /* USER elements spacing */
