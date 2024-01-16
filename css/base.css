@@ -767,24 +767,9 @@ body.path-portfolio .ep-subgroup .cci-expanded > h2 {
 /* User major collaborations styling */
 
 .con-major-collaborations > h5 > span {
-  font-weight: bold;
+  font-weight: bolder;
 }
 
-.con-major-collaborations > h5 > span:after {
-  content:":"
-}
-
-.con-major-collaborations .content, .con-major-collaborations .content div{
-  display:inline;
-}
-
-.con-major-collaborations .content div:not(.field--label):not(:last-child):after {
-  content:","
-}
-
-.con-major-collaborations .content div.field--label:after {
-  content:":"
-}
 
 
 
