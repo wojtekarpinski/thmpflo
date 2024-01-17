@@ -651,6 +651,7 @@ body.path-portfolio .ep-subgroup .cci-expanded > h2 {
   border-bottom: 1px solid var(--color--bordergray);
 }
 
+
 .field--name-field-usr-pers-webpage-url .field--items {
   display:flex;
   flex-direction: row;
@@ -665,10 +666,15 @@ body.path-portfolio .ep-subgroup .cci-expanded > h2 {
 .field--name-field-usr-jobs article div[class*="field--name-field-job-"] > .field--item {
   display: flex;
 }
+/* Hiding country from user brief */
+
+#usr-con-job .field--name-field-aux-country {
+  display:none;
+}
 
 /* User research topics */
 #edit-group-usr-dsp-scientific--content .field--name-field-usr-research-keywords .field--items > .field--item {
-
+  
   display: inline-block;
   background: var(--color--accent);
   color: var(--color--txtwbg);
