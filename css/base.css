@@ -3,129 +3,8 @@
  * Generic base elements.
  */
 
-/* Branding: logos shortening and widening */
-
-@media screen and (max-width:768px) {
-  #logo-uw-mobile {
-    display:inline-block;
-    background-image: url(/themes/contrib/thmpflo/files/logo/logo-uw-mobile.svg);
-    background-position:left center;
-    background-size: auto 100%;
-    background-repeat: no-repeat;
-    height: 59px;
-    width: 60px;
-    float: left;
-  }
- 
-  #logo-uw-full {
-    display: none;
-  }
-
-  #logo-ep-full {
-    display:none;
-  }
-
-    #logo-ep-mobile {
-    display: inline-block;
-    background-image: url("/themes/contrib/thmpflo/files/logo/logo-eportfolio.svg");
-    background-size: auto 100%;
-    height: 59px;
-    width: 200px;
-    margin-left:20px;
-    background-repeat: no-repeat;
-  }  
-  @media screen and (max-width: 700px) {
-    body.path-frontpage div.region-content { 
-      background-image:url("../files/ludz.svg"), url(../files/plama.svg);
-      background-position: 120% 0%, right;
-      background-repeat: no-repeat;
-      background-size: auto, auto 100%;
-      background-blend-mode: normal;
-    }
-  
-    #logo-uw-full::after {
-      content: " ";
-      float: right;
-      position: relative;
-      top: 10px;
-      height: 52px;
-      width: 20px;
-      border-right: 1px solid var(--color--bordergray);
-      
-    }
-
-    #contact-info {
-      flex-direction: column;
-    }
-
-    @media screen and (max-width:600px) {
-      #logo-ep-mobile {
-        width: 60px;
-      }
-      body.path-frontpage div.region-content {
-        background-image:url(../files/plama.svg), url("../files/ludz.svg");
-        background-position: right, 350px 0%;
-        background-size: auto 100%, auto;
-        background-blend-mode: hard-light;
-        
-      }
-
-      @media screen and (max-width:435px) {
-        #logo-ue {
-          height: 59px;
-          width: 100px;
-          object-fit: cover;
-          object-position: right;
-        }
-        body.path-frontpage div.region-content {
-          background-position: right, 220px 0%;
-        }
-
-          @media screen and (max-width:360px) {
-            body.path-frontpage div.region-content {
-              background-position: right, 120px 0%;
-            }
-
-          }
-      }
-    }
-  }
-}
-
-@media screen and (min-width:768px) {
-  #logo-uw-mobile {
-    display: none;
-  }
-  
-  #logo-ep-mobile {
-    display:none;
-  }
-
-  #logo-ep-full {
-    display:inline-block;
-    background-image: url("/themes/contrib/thmpflo/files/logo/logo-eportfolio.svg");
-    width: 200px;
-    margin-left:20px;
-   }
-
-   #logo-uw-full {
-    background-image: url(/themes/contrib/thmpflo/files/logo/logo-uw-full.svg);
-    width: 156px;
-  
-  }
-
-}
 
 
-
-
-#logo-uw-full, #logo-ep-full {
-  background-position:left center;
-  background-size: auto 100%;
-  background-repeat: no-repeat;
-  float: left;
-  height: 59px;
-}
 
 /* Flex utilities */
  
@@ -201,7 +80,27 @@ justify-content: flex-end;
   padding-bottom: 15px;
 }
 
-/* High contrast */
+/* margin utilities */
+
+.margin-bottom-5 {
+  margin-bottom:5px;
+}
+
+/* ACCESSIBILITY FEATURES */
+  /* Larger font size */
+  
+  body.larger-text, body .larger-text{
+    font-size: 16px;
+  }
+  
+  /* Smaller font size */
+
+  body.smaller-text, body .smaller-text{
+    font-size: 12px !important;
+  }
+  
+
+  /* High contrast */
 
 body.high-contrast *{
   color: var(--color--hc--yellow);
@@ -226,7 +125,7 @@ body.high-contrast #toggle-high-contrast {
 }
 
 body.high-contrast a#toggle-high-contrast:hover {
-  color: #FFFF00;
+  color:var(--color--hc--yellow);
   text-decoration: none;
   opacity: 0.9;
 }
@@ -235,7 +134,17 @@ body.high-contrast .ep-usr-name{
   background-image: none;
 }
 
-body.high-contrast #block-thmpflo-branding-2 *, body.high-contrast #block-thmpflo-fundatorzy *{
+body.high-contrast button:hover{
+  color:var(--color--hc--yellow);
+  border: 2px dashed var(--color--hc--yellow);
+  text-decoration: underline;
+}
+
+ body.high-contrast #contact-info img {
+  filter:grayscale(100%) brightness(10);
+} 
+
+body.high-contrast #block-thmpflo-branding *, body.high-contrast #block-thmpflo-brandingwidokportfolio *, body.high-contrast #block-thmpflo-fundatorzy *{
   background-color: white;
 }
 
@@ -243,10 +152,17 @@ body.path-frontpage.high-contrast div.region-content {
   background-image:none;
 }
 
+
+
 /* Homepage, navbar and footer branding and looks */
 
+html body {
+  font-family: BlinkMacSystemFont,-apple-system,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+}
+
 .about {
-  font-size:large;
+  margin-top: 1.5em;
+  font-size:20px;
 }
 
 #toggle-high-contrast{
@@ -260,6 +176,67 @@ body.path-frontpage.high-contrast div.region-content {
 #toggle-high-contrast:focus{
   background:none;
 }
+
+nav a {
+  color: var(--color--pflo--uwblue);
+}
+
+
+
+/* dodane z THMEPC */
+
+
+li.text-size a{
+  padding-left: 1px;
+}
+li.text-size:not(:last-child) a{
+  padding-right: 2px;
+}
+
+li.text-size:hover, li.text-size a:focus {
+  background-color:white;
+}
+li.text-size a:hover {
+  background-color: white;
+  color:var(--color--pflo--salmon);
+}
+
+#toggle-regular-text {
+  font-size: 14px;
+}
+#toggle-smaller-text {
+  font-size: 12px;
+}
+#toggle-larger-text {
+  font-size: 16px;
+}
+
+body.larger-text ul li.text-size {
+  #toggle-larger-text {
+    text-decoration: underline; 
+  }
+  #toggle-smaller-text {
+    text-decoration: none;
+  }
+  #toggle-regular-text {
+    text-decoration: none; 
+  }
+}
+body.smaller-text ul li.text-size {
+  #toggle-smaller-text {
+    text-decoration: underline;
+  }
+  #toggle-larger-text {
+    text-decoration: none; 
+  }
+  #toggle-regular-text {
+    text-decoration: none; 
+  }
+}
+
+body:not(.smaller-text):not(.larger-text) ul li.text-size #toggle-regular-text{
+  text-decoration: underline;
+} 
 
 
  /* body {
@@ -280,6 +257,9 @@ div[data-off-canvas-main-canvas=""] {
   grid-template-rows: 1fr auto;
 }
 
+#block-thmpflo-branding {
+  margin-bottom:2em;
+}
 
 .navbar-default .navbar-brand {
   color: var(--color--come);
@@ -567,14 +547,19 @@ div.cci-idx > ul {
 
 /* ePportfolio presentation */
 
-body.path-portfolio .ep-usr-image {
-  float: left;
-  margin-left: 1.5em;
-  margin-bottom: 1.5em;
-  padding-right: calc(33.333% - 200px);
+#usr-pers-data {
+  min-height: 300px;
 }
 
-body.path-portfolio .ep-usr-image img {
+body.path-portfolio .ep-usr-image, body.path-user .ep-usr-image {
+  float: left;
+  margin-left: 1.5em;
+  /* margin-bottom: 1.5em; -- useless */
+  /* padding-right: calc(20% - 200px); -- causing problems in lower vw */
+  padding-right: 30px; /* FIX */
+}
+
+body.path-portfolio .ep-usr-image img, body.path-user .ep-usr-image img {
   border-radius: 5px;
   border: 2px solid var(--color--txtwbg);
 }
@@ -606,6 +591,220 @@ body.path-portfolio .ep-subgroup .cci-expanded > h2 {
   background-color: var(--color--accent);
   color:var(--color--txtwbg);
   border: 0;
+}
+
+/* USER BRIEF */
+
+  /*Temporary changes: hide h1, add margin top*/
+
+  body.path-user h1.page-header {
+    display: none;
+  }
+
+  #usr-pers-data {
+    margin-top: 1em;
+  }
+
+
+  /* NAME SURNAME */
+
+  body.path-user .field--name-field-usr-firstname, body.path-user .field--name-field-usr-surname {
+    display: inline-block;
+    font-size: 36px;
+  }
+  
+  body.path-user .field--name-field-usr-firstname::after {
+    content:"\a0";
+  }
+
+
+  /* JOBS, CONTACTS, LINKS centering */
+
+#usr-jobs-contact-links {
+  min-height: 170px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+  /*Link separator */
+.field--name-field-usr-pers-webpage-url .field--items div:not(:last-child)::after {
+  content:",\20"
+}
+
+  /* Con jobs presentation */
+
+#usr-con-job .field--item > article > div , .grid-column-1-1{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+ #usr-con-job .field--items{
+  display:flex;
+  flex-direction: column;
+}
+
+#usr-con-job .field--items, #usr-contact-data {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid var(--color--bordergray);
+}
+
+
+.field--name-field-usr-pers-webpage-url .field--items {
+  display:flex;
+  flex-direction: row;
+  gap: 5px;
+}
+
+.field--name-field-usr-pers-webpage-url {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.field--name-field-usr-jobs article div[class*="field--name-field-job-"] > .field--item {
+  display: flex;
+}
+/* Hiding country from user brief */
+
+#usr-con-job .field--name-field-aux-country {
+  display:none;
+}
+
+/* User research topics */
+#edit-group-usr-dsp-scientific--content .field--name-field-usr-research-keywords .field--items > .field--item {
+  
+  display: inline-block;
+  background: var(--color--accent);
+  color: var(--color--txtwbg);
+  padding: 5px;
+  border: 1px solid var(--color--accent);
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+
+/* User edit form preferred colors */
+
+#edit-field-usr-profile-color input {
+  margin-left: -45px;
+}
+
+#edit-field-usr-profile-color--wrapper label[for^="edit-field-usr-profile-color-"] {
+  padding-left: 50px;
+}
+
+#edit-field-usr-profile-color--wrapper label[for^="edit-field-usr-profile-color-"]::before {
+  content:"";
+  position:absolute;
+  height: 20px;
+  width: 20px;
+  margin-left: -25px;
+}
+
+#edit-field-usr-profile-color--wrapper label[for="edit-field-usr-profile-color-default"]::before {
+  background-color: var(--color--pflo--salmon);
+}
+#edit-field-usr-profile-color--wrapper label[for="edit-field-usr-profile-color-green"]::before {
+  background-color: var(--color--pflo--green);
+}
+#edit-field-usr-profile-color--wrapper label[for="edit-field-usr-profile-color-blue"]::before {
+  background-color: var(--color--pflo--blue);
+}
+#edit-field-usr-profile-color--wrapper label[for="edit-field-usr-profile-color-uwblue"]::before {
+  background-color: var(--color--pflo--uwblue);
+}
+#edit-field-usr-profile-color--wrapper label[for="edit-field-usr-profile-color-red"]::before {
+  background-color: var(--color--pflo--red);
+}
+#edit-field-usr-profile-color--wrapper label[for="edit-field-usr-profile-color-orange"]::before {
+  background-color: var(--color--pflo--orange);
+}
+#edit-field-usr-profile-color--wrapper label[for="edit-field-usr-profile-color-purple"]::before {
+  background-color: var(--color--pflo--purple);
+}
+#edit-field-usr-profile-color--wrapper label[for="edit-field-usr-profile-color-gray"]::before {
+  background-color: var(--color--pflo--gray);
+}
+
+/* Hiding empty radio */
+
+#edit-field-usr-profile-color--wrapper label[for="edit-field-usr-profile-color-none"] {
+  display: none;
+}
+
+/* User education styling */
+
+#usr-education--content{
+  article {
+    padding-top:1em;
+    padding-bottom:1em;
+
+    li div {
+      .field--label {
+        float:none;
+      }
+      .field--label:before {
+        content:' ';
+        display:block;
+      }
+      display: inline;
+    }
+  }
+
+  .field--name-field-aux-year-mod:after {
+    content:" -";
+  }
+
+  .field--name-field-aux-degree {
+    font-weight: bold;
+  }
+
+  .field--name-field-aux-degree:after {
+    content: ":"
+  }
+
+  .field--name-field-instytute:after, .field--name-field-department:after, .field--name-field-university-or-institution:after{
+    content:",";
+  }
+}
+
+/* User major collaborations styling */
+
+.con-major-collaborations > h5 > span {
+  font-weight: bolder;
+}
+
+
+
+
+/* USER elements spacing */
+
+body.path-user div[class*="field--name-field-usr-"]:not(#usr-pers-data div[class*="field--name-field-usr-"]) {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+body.path-user .panel-body {
+  padding-top: 0;
+}
+
+body.path-user div.tab-content div.field:nth-child(n+1) div.field--item {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  margin-left: 0.5em;
+}
+
+
+/* USER elements listing*/
+
+body.path-user div.tab-content div.field--item article {
+  margin-left: 1em;
+}
+
+body.path-user div.tab-content div.field--item article > h5 > span {
+  display:list-item;
 }
 
 /*  */

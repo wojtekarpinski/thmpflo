@@ -22,9 +22,18 @@
 {% macro menu_links(items, attributes, menu_level, classes, dropdown_classes) %}
   {% if items %}
     <ul{{ attributes.addClass(menu_level == 0 ? classes : dropdown_classes) }}>
-    <li>
-      <a id="toggle-high-contrast" href="#" class="pull-right icon icon-eye" aria-hidden="true"></a>
+    <li class="menu-item text-size">
+      <a id="toggle-larger-text" href="#" class="larger-text" title="Powiększ rozmiar czcionki.">A</a>
     </li>
+    <li class="menu-item text-size">
+      <a id="toggle-regular-text" href="#" title="Przywróć standardowy rozmiar czcionki.">A</a>
+    </li>
+    <li class="menu-item text-size">
+      <a id="toggle-smaller-text" href="#" class="smaller-text" title="Zmniejsz rozmiar czcionki.">A</a>
+    </li>
+    <li class="menu-item">
+      <a id="toggle-high-contrast" href="#" class="icon icon-eye" aria-hidden="true"></a>
+    </li>  
     {% for item in items %}
       {%
         set item_classes = item.url.getOption('container_attributes').class
