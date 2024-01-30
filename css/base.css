@@ -430,7 +430,7 @@ input.form-control:focus {
 /* e-P header styling */
 
 .ep-usr-name {
-  background: url(/themes/contrib/thmpflo/files/wzorek.png) no-repeat right,var(--color--accent);
+  background: url(/themes/custom/thmpflo/files/wzorek.png) no-repeat right,var(--color--accent);
   color: var(--color--txtwbg);
   background-size: 318px;
   border-radius: 5px;
