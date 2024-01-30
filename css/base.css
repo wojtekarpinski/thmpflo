@@ -423,7 +423,7 @@ input.form-control:focus {
   margin-bottom: 0.5rem;
 }
 
-#advanced-search {
+.form-item:has(#edit-fusn), .form-item:has(#edit-fufn), .form-item:has(#edit-fusx), .form-item:has(#edit-fudn), .form-item:has(#edit-fups), .form-item:has(#edit-fuut){
   display: none;
 }
 
