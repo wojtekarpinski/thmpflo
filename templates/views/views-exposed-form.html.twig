@@ -19,14 +19,15 @@
   {{ q }}
 {% endif %}
 <div id="search-container" class="clearfix">
-  <div id="basic-search">
-    <input class="form-text form-control" type="text"/>
-    <div id="submit-search"> <!--class="flex-row-flex-end"-->
-      <button class="btn-primary btn icon-before" type="submit" value="Szukaj"><span class="icon glyphicon glyphicon-search" aria-hidden="true"></span>Szukaj</button>
-    </div>
-  </div>
-  <div id="advanced-search" class="flex-column">
+  
+  <div class="flex-column">
     {{ form }}
   </div>
   <button onmousedown="searchSelect()" id="search-selector">Wyszukiwanie zaawansowane <span class="caret"></span></button>
 </div>
+
+
+
+
+
+
