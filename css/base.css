@@ -757,7 +757,7 @@ body.path-portfolio .ep-subgroup .cci-expanded > h2 {
     content:" -";
   }
 
-  .field--name-field-aux-degree {
+  .field--name-field-degree {
     font-weight: bold;
   }
 
@@ -765,7 +765,7 @@ body.path-portfolio .ep-subgroup .cci-expanded > h2 {
     content: ":"
   }
 
-  .field--name-field-instytute:after, .field--name-field-department:after, .field--name-field-university-or-institution:after{
+  .field--name-field-aux-institute:after, .field--name-field-aux-department:after, .field--name-field-aux-univsty-or-instn:after{
     content:",";
   }
 }
