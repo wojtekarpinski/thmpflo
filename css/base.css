@@ -753,7 +753,7 @@ body.path-portfolio .ep-subgroup .cci-expanded > h2 {
     }
   }
 
-  .field--name-field-aux-year-mod:after {
+  .field--name-field-aux-year:after {
     content:" -";
   }
 
@@ -761,7 +761,7 @@ body.path-portfolio .ep-subgroup .cci-expanded > h2 {
     font-weight: bold;
   }
 
-  .field--name-field-aux-degree:after {
+  .field--name-field-degree:after {
     content: ":"
   }
 
