@@ -18,10 +18,14 @@
   #}
   {{ q }}
 {% endif %}
+{% if 'path-frontpage' in body_classes %}
 <div id="search-container" class="clearfix">
   
   <div class="flex-column">
+  {% endif %}
     {{ form }}
+{% if 'path-frontpage' in body_classes %}
   </div>
   <button onmousedown="searchSelect()" id="search-selector">Wyszukiwanie zaawansowane <span class="caret"></span></button>
 </div>
+{% endif %}
