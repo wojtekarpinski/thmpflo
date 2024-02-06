@@ -1,4 +1,4 @@
-Drupal.behaviors.thmpflo = {
+Drupal.behaviors.searchFormHandler = {
     attach: function searchFormHandler() {
         if(document.body.classList.contains("path-szukaj")) {
             //Hide discipline label
