@@ -13,7 +13,7 @@ global-styling:
       scripts/toggleSmallerText.js: {}
       scripts/toggleHighContrast.js: {}
       scripts/setProfileColor.js: {}
-      scripts/searchFormHandler.js: {}
+      # scripts/searchFormHandler.js: {}
 
 
 
