@@ -7,6 +7,7 @@ Drupal.behaviors.searchState =
                 let formItems = document.getElementsByClassName("form-item");
                 let itemsNb = formItems.length;
                 let tempState = localStorage.searchState;
+                let searchSwitch = document.getElementById("search-selector");
                 console.log("initial searchState:");
                 console.log(tempState);
                 if(typeof tempState === 'undefined') 
@@ -26,6 +27,7 @@ Drupal.behaviors.searchState =
                         formItems[i].style.display = "block";
                     }
                     formItems[0].style.display = "";
+                    searchSwitch.innerHTML = "Proste wyszukiwanie <span class=\"dropup\"><span class=\"caret\"></span></span>";
                 }
 
             }
