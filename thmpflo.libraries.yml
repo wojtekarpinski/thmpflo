@@ -6,6 +6,7 @@ global-styling:
       css/base.css: {}
       css/responsive.css: {}
       css/icomoon.css: {}
+      css/search.css: {}
   js:
       scripts/searchSelect.js: {}
       # scripts/responsive-portfolio.js: {}
@@ -13,7 +14,8 @@ global-styling:
       scripts/toggleSmallerText.js: {}
       scripts/toggleHighContrast.js: {}
       scripts/setProfileColor.js: {}
-      # scripts/searchFormHandler.js: {}
+       scripts/searchFormHandler.js: {}
+      
 
 
 

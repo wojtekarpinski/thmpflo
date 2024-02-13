@@ -1,17 +1,27 @@
-Drupal.behaviors.searchFormHandler = {
-    attach: function searchFormHandler() {
+Drupal.behaviors.searchState = 
+{
+    attach: function readSearchState()
+    {
         if(document.body.classList.contains("path-szukaj")) {
-            console.log("SearchFormHandler init.");
-            //Hide discipline label
-            let disciplineLabel = document.querySelector("label");
-            disciplineLabel.style.display = "none";
-            //Fill the placeholder
-            let disciplineField = document.getElementById("edit-fudn--2");
-            disciplineField.setAttribute("placeholder","Dyscyplina naukowa");
-            //Hide searchSelector
-            let searchSelector = document.getElementById("search-selector");
-            searchSelector.style.display = "none";
+            let formItems = document.getElementsByClassName("form-item");
+            let itemsNb = formItems.length;
+            let tempState = localStorage.searchState;
+            if(typeof tempState === 'undefined') 
+            {
+                localStorage.searchState = 'basic';
+            }
+            if(localStorage.searchState === 'basic') {
+                //Display basic search field
+                formItems[0].style.display = "block";
+                
+            } else {
+                //Display advanced search fields
+                for(let i = 1; i < itemsNb; i++) {
+                    formItems[i].style.display = "block";
+                }
+            }
+
         }
+        
     }
-    
 }

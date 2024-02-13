@@ -3,32 +3,55 @@ function searchSelect() {
     var searchFormItems = document.getElementsByClassName("form-item");
     var basicField = searchFormItems[0];
     let inputs = searchFormItems.length;
-    let byebyeLabel = document.querySelector("label");
-    let discipline = document.querySelector("#edit-fudn")
-
     var searchSwitch = document.getElementById("search-selector");
     
 
-    console.log(getComputedStyle(basicField).getPropertyValue("display"));
-    if (getComputedStyle(basicField).getPropertyValue("display") === "none") {
-        for(let i = 1; i < inputs; i++) {
-            console.log(i);
-            searchFormItems[i].style.display="none"
+    // console.log(getComputedStyle(basicField).getPropertyValue("display"));
+    if(document.body.classList.contains("path-frontpage")) {
+
+        if (getComputedStyle(basicField).getPropertyValue("display") === "none") {
+            showBasic(searchFormItems, basicField, inputs, searchSwitch);
+            localStorage.searchState = "basic";
+        } else {
+            showAdvanced(searchFormItems, basicField, inputs, searchSwitch);
+            localStorage.searchState = "advanced"
         }
-        basicField.style.display = "block";
-        searchSwitch.innerHTML = "Wysukiwanie zaawansowane <span class=\"caret\"></span>";
-    } else {
-        basicField.style.display = "none";
-        for(let i = 1; i < inputs; i++) {
-            searchFormItems[i].style.display="block"
+    }
+    if(document.body.classList.contains("path-szukaj")){
+        let tempState = localStorage.searchState;
+        if(typeof tempState === "undefined") {
+            (console.error || console.log)("searchState was undefined");
+            localStorage.searchState = "basic";
+            showBasic(searchFormItems, basicField, inputs, searchSwitch);
         }
-        if(getComputedStyle(byebyeLabel).getPropertyValue("display") != "none")
-        {
-            byebyeLabel.style.display = "none";
-            discipline.setAttribute("placeholder","Dyscyplina naukowa");
+        // Reversed logic because function is called onClick
+        if (localStorage.searchState = "basic") {
+            showAdvanced(searchFormItems, basicField, inputs, searchSwitch);
+            localStorage.searchState = "advanced";
         }
-        searchSwitch.innerHTML = "Proste wyszukiwanie <span class=\"dropup\"><span class=\"caret\"></span></span>";
+        if (localStorage.searchState = "advanced") {
+            showBasic(searchFormItems, basicField, inputs, searchSwitch);
+            localStorage.searchState = "basic";
+        }
     }
 
 
+}
+
+function showBasic(searchFormItems, basicField, inputs, searchSwitch) {
+    for(let i = 1; i < inputs; i++) {
+        searchFormItems[i].style.display="none"
+    }
+    basicField.style.display = "block";
+    
+    searchSwitch.innerHTML = "Wysukiwanie zaawansowane <span class=\"caret\"></span>";
+}
+
+function showAdvanced(searchFormItems, basicField, inputs, searchSwitch) {
+    basicField.style.display = "none";
+    for(let i = 1; i < inputs; i++) {
+        searchFormItems[i].style.display="block"
+    }
+    
+    searchSwitch.innerHTML = "Proste wyszukiwanie <span class=\"dropup\"><span class=\"caret\"></span></span>";
 }

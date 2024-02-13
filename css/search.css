@@ -1,0 +1,4 @@
+/* Default state for readSearchState.js handling */
+body.path-szukaj form .form-item {
+    display : none;
+}
