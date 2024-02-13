@@ -45,7 +45,7 @@ function showBasic(searchFormItems, basicField, inputs, searchSwitch) {
     for(let i = 1; i < inputs; i++) {
         searchFormItems[i].style.display="none"
     }
-    basicField.style.display = "block";
+    basicField.style.display = "";
     
     searchSwitch.innerHTML = "Wyszukiwanie zaawansowane <span class=\"caret\"></span>";
 }
@@ -53,7 +53,7 @@ function showBasic(searchFormItems, basicField, inputs, searchSwitch) {
 function showAdvanced(searchFormItems, basicField, inputs, searchSwitch) {
     basicField.style.display = "none";
     for(let i = 1; i < inputs; i++) {
-        searchFormItems[i].style.display="block"
+        searchFormItems[i].style.display=""
     }
     
     searchSwitch.innerHTML = "Proste wyszukiwanie <span class=\"dropup\"><span class=\"caret\"></span></span>";
