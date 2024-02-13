@@ -2,26 +2,33 @@ Drupal.behaviors.searchState =
 {
     attach: function readSearchState()
     {
-        if(document.body.classList.contains("path-szukaj")) {
-            let formItems = document.getElementsByClassName("form-item");
-            let itemsNb = formItems.length;
-            let tempState = localStorage.searchState;
-            if(typeof tempState === 'undefined') 
-            {
-                localStorage.searchState = 'basic';
-            }
-            if(localStorage.searchState === 'basic') {
-                //Display basic search field
-                formItems[0].style.display = "block";
-                
-            } else {
-                //Display advanced search fields
-                for(let i = 1; i < itemsNb; i++) {
-                    formItems[i].style.display = "block";
-                }
-            }
-
-        }
         
-    }
+            if(document.body.classList.contains("path-szukaj")) {
+                let formItems = document.getElementsByClassName("form-item");
+                let itemsNb = formItems.length;
+                let tempState = localStorage.searchState;
+                console.log("initial searchState:");
+                console.log(tempState);
+                if(typeof tempState === 'undefined') 
+                {
+                    localStorage.searchState = 'basic';
+                }
+                if(localStorage.searchState === 'basic') {
+                    //Display basic search field
+                    formItems[0].style.display = "block";
+                    for(let i = 1; i < itemsNb; i++) {
+                        formItems[i].style.display = "";
+                    }
+                    
+                } else {
+                    //Display advanced search fields
+                    for(let i = 1; i < itemsNb; i++) {
+                        formItems[i].style.display = "block";
+                    }
+                    formItems[0].style.display = "";
+                }
+
+            }
+            
+        }
 }

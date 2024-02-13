@@ -413,6 +413,7 @@ input.form-control:focus {
 } */
 
 #search-selector {
+  display:block;
   width: 100%;
   text-align: right;
   border: none 1px;

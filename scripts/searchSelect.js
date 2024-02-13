@@ -25,13 +25,16 @@ function searchSelect() {
             showBasic(searchFormItems, basicField, inputs, searchSwitch);
         }
         // Reversed logic because function is called onClick
-        if (localStorage.searchState = "basic") {
+        //let tmp = ;
+        if (localStorage.searchState === "basic") {
             showAdvanced(searchFormItems, basicField, inputs, searchSwitch);
             localStorage.searchState = "advanced";
-        }
-        if (localStorage.searchState = "advanced") {
+            console.log("was basic, switching to advanced")
+            console.log(localStorage.searchState);
+        } else {
             showBasic(searchFormItems, basicField, inputs, searchSwitch);
             localStorage.searchState = "basic";
+            console.log("was advanced, switching to basic");
         }
     }
 
@@ -44,7 +47,7 @@ function showBasic(searchFormItems, basicField, inputs, searchSwitch) {
     }
     basicField.style.display = "block";
     
-    searchSwitch.innerHTML = "Wysukiwanie zaawansowane <span class=\"caret\"></span>";
+    searchSwitch.innerHTML = "Wyszukiwanie zaawansowane <span class=\"caret\"></span>";
 }
 
 function showAdvanced(searchFormItems, basicField, inputs, searchSwitch) {
@@ -55,3 +58,11 @@ function showAdvanced(searchFormItems, basicField, inputs, searchSwitch) {
     
     searchSwitch.innerHTML = "Proste wyszukiwanie <span class=\"dropup\"><span class=\"caret\"></span></span>";
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    if(document.body.classList.contains("path-frontpage")) {
+        localStorage.searchState = "basic";
+        console.log("Loaded basic");
+    }
+    
+});
